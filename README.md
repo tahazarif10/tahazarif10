@@ -2,10 +2,6 @@
   <img src="./baner.png" alt="Taha Zarif banner" width="100%">
 </p>
 
-# Taha Zarif
-
-### Robotics · Embedded Systems · Open Source
-
 I like building things that **move, sense and react** — and I like figuring out what went wrong when they don't.
 
 I'm exploring robotics, embedded systems and real-time software through hands-on projects, debugging and open-source work.
