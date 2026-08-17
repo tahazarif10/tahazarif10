@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./baner.png" alt="Taha Zarif banner" width="100%">
+  <img src="./banner.png" alt="Taha Zarif banner" width="100%">
 </p>
 
 I like building things that **move, sense and react** — and I like figuring out what went wrong when they don't.
