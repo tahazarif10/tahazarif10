@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./baner.png" alt="Taha Zarif banner" width="100%">
+</p>
+
 # Taha Zarif
 
 ### Robotics · Embedded Systems · Open Source
