@@ -4,7 +4,7 @@
 
 # Hi, I'm Taha 👋
 
-[**Public Technical Resume**](./RESUME.md) · [**LinkedIn**](https://www.linkedin.com/in/taha-zarif-bba94b397/)
+[**Public Technical Resume**](./RESUME.md) · [**Engineering Evidence**](./EVIDENCE.md) · [**LinkedIn**](https://www.linkedin.com/in/taha-zarif-bba94b397/)
 
 I build software around robotics, embedded systems, and real-time applications, with a focus on reliability, deterministic behavior, testing, and debugging.
 

@@ -3,7 +3,8 @@
 ## Robotics & Embedded Software
 
 **GitHub:** [tahazarif10](https://github.com/tahazarif10)  
-**LinkedIn:** [linkedin.com/in/taha-zarif-bba94b397](https://www.linkedin.com/in/taha-zarif-bba94b397/)
+**LinkedIn:** [linkedin.com/in/taha-zarif-bba94b397](https://www.linkedin.com/in/taha-zarif-bba94b397/)  
+**Engineering Evidence:** [EVIDENCE.md](./EVIDENCE.md)
 
 ### Profile
 
@@ -35,6 +36,8 @@ Robotics and embedded-software focused developer with hands-on industrial automa
 - Hosted GitHub Actions CI verifies dependency resolution, `colcon build`, `colcon test`, lifecycle transitions, invalid-configuration rejection, TF availability, and the deterministic Nav2 fixture. Navigation evidence is explicitly scoped to the checked-in simulation fixture, not hardware performance.
 
 ### Open Source Contributions
+
+**6 merged upstream pull requests** across robotics, desktop software, frontend, orchestration, and localization projects.
 
 - **Robotics Toolbox for Python** — merged PR #644: restored a missing distance-transform diagonal.
 - **Motrix** — merged PR #1885: restored tray left-click window toggling.
