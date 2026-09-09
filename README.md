@@ -38,6 +38,12 @@ A middleware-independent C++20 robotics core for differential-drive navigation: 
 
 **Public engineering evidence:** installable CMake package, GCC/Clang/MSVC CI, ASan/UBSan, CodeQL, deterministic regression tests, package-consumer verification, benchmark documentation, and a reviewed PR workflow. In the checked-in v0.2 fixture, pure pursuit reaches the goal collision-free using 5 smoothed waypoints versus the 26-waypoint PID baseline; the repository documents the full metrics and scopes them as regression evidence rather than hardware claims.
 
+### [ROS 2 Autonomous Mobile Robot](https://github.com/tahazarif10/ros2-autonomous-mobile-robot)
+
+A ROS 2 Jazzy / Ubuntu 24.04 autonomous-mobile-robot stack developed in evidence-driven milestones. The current v0.2 baseline includes a differential-drive Xacro model, headless launch verification, and a C++20 lifecycle adapter that consumes the standalone `robotics-control-core` package at a pinned commit.
+
+**Public engineering evidence:** hosted `colcon build` / `colcon test` CI, Path + Odometry conversion, bounded `cmd_vel`, explicit stale/missing/non-finite input safe-stop behavior, lifecycle transition tests, invalid-configuration tests, and milestone verification records.
+
 ### [Local AI Desktop Copilot](https://github.com/tahazarif10/local-ai-desktop-copilot)
 
 A privacy-first Windows desktop copilot project focused on controlled context sensing, strict privacy boundaries, deterministic behavior, and testable system architecture.
@@ -56,9 +62,9 @@ I contribute focused fixes and tests to existing projects, with an emphasis on r
 
 ## Currently Building Toward
 
-- ROS 2 robotics development
+- Nav2 integration, localization, and autonomous navigation
 - Real-time embedded systems
 - Sensor and communication interfaces
-- Autonomous navigation and control
+- Reproducible simulation and hardware validation
 
 I’m particularly interested in software that has to interact reliably with the physical world.
