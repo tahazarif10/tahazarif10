@@ -24,9 +24,9 @@ I build software around robotics, embedded systems, and real-time applications, 
 
 ### [Robotics Control Core](https://github.com/tahazarif10/robotics-control-core)
 
-A middleware-independent C++20 robotics core for differential-drive navigation: deterministic A* planning, PID control, forward/inverse kinematics, SE(2) odometry, and closed-loop path tracking.
+A middleware-independent C++20 robotics core for differential-drive navigation: deterministic A* planning, obstacle inflation, collision-safe path shaping, PID and interpolated-lookahead pure-pursuit control, forward/inverse kinematics, and SE(2) odometry.
 
-Built as an installable CMake package with multi-compiler CI across GCC, Clang, and MSVC, ASan/UBSan, CodeQL, deterministic regression tests, Docker, reusable package-consumer verification, and evidence-backed engineering documentation.
+**Public engineering evidence:** installable CMake package, GCC/Clang/MSVC CI, ASan/UBSan, CodeQL, deterministic regression tests, package-consumer verification, benchmark documentation, and a reviewed PR workflow. In the checked-in v0.2 fixture, pure pursuit reaches the goal collision-free using 5 smoothed waypoints versus the 26-waypoint PID baseline; the repository documents the full metrics and scopes them as regression evidence rather than hardware claims.
 
 ### [Local AI Desktop Copilot](https://github.com/tahazarif10/local-ai-desktop-copilot)
 
