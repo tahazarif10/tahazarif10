@@ -4,6 +4,8 @@
 
 # Hi, I'm Taha 👋
 
+[**Public Technical Resume**](./RESUME.md)
+
 I build software around robotics, embedded systems, and real-time applications, with a focus on reliability, deterministic behavior, testing, and debugging.
 
 ## Focus
