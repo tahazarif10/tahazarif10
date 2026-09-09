@@ -2,50 +2,37 @@
   <img src="./banner.png" alt="Taha Zarif banner" width="100%">
 </p>
 
-I like building things that **move, sense and react** — and I like figuring out what went wrong when they don't.
+# Hi, I'm Taha 👋
 
-I'm exploring robotics, embedded systems and real-time software through hands-on projects, debugging and open-source work.
+I build software around robotics, embedded systems, and real-time applications, with a focus on reliability, deterministic behavior, testing, and debugging.
 
-Most of the time you'll find me somewhere between **software and hardware**, working with C++, Python and microcontrollers.
+## Focus
 
----
+- Robotics & autonomous systems
+- Embedded and real-time software
+- C++ systems programming
+- Hardware/software integration
+- Testing, debugging, and root-cause analysis
 
-### What interests me
+## Tech
 
-- 🤖 Robotics and simulation
-- ⚙️ Embedded systems and microcontrollers
-- 🎛️ Control and real-time systems
-- 🔍 Debugging and root-cause analysis
-- 🧪 Reproducible tests and edge cases
-- 🌍 Open-source development
+**Languages:** C++, Python, C#  
+**Platforms & Tools:** Linux, Git, CMake, .NET, Arduino  
+**Engineering:** Unit Testing, CI, Debugging, Software Architecture
 
-### Tools I work with
+## Featured Work
 
-`C++` · `Python` · `Arduino` · `Git` · `Linux`
+### Local AI Desktop Copilot
 
----
+A privacy-first Windows desktop copilot project focused on controlled context sensing, strict privacy boundaries, deterministic behavior, and testable system architecture.
 
-### How I like to work
+The project includes automated CI, deterministic tests, architecture documentation, privacy constraints, and explicit engineering acceptance criteria.
 
-I enjoy taking a problem apart until I understand **why** it happens, not just how to make it disappear.
+## Currently Building Toward
 
-When I run into a bug, my first questions are usually:
+- ROS 2 robotics development
+- Real-time embedded systems
+- Sensor and communication interfaces
+- Autonomous navigation and control
 
-> Can I reproduce it?  
-> Can I isolate it?  
-> Can I turn it into a test?
-
-I'm currently getting deeper into open source by reading the code behind issues, testing assumptions and contributing focused technical feedback.
-
----
-
-### Currently
-
-- building small robotics and embedded experiments
-- learning more about simulation and control
-- improving my C++ and Python
-- working toward more code contributions and pull requests
-
----
-
-If you're working on something around robotics or embedded systems and there's an interesting technical problem to dig into, I'm always curious.
+I’m particularly interested in software that has to interact reliably with the physical world.
