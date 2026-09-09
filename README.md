@@ -20,6 +20,14 @@ I build software around robotics, embedded systems, and real-time applications, 
 **Platforms & Tools:** Linux, Git, CMake, .NET, Arduino  
 **Engineering:** Unit Testing, CI, Debugging, Software Architecture
 
+## Industrial Engineering Work
+
+Selected hands-on work on CNC and industrial automation systems:
+
+- Developed Python/PyQt control software integrating with a **Delta AS228T-series PLC** over Modbus TCP.
+- Implemented and debugged servo-axis motion for saw and clamp mechanisms, including millimetre-to-pulse conversion, homing, jog, busy/done state, limits, alarms, and readiness/safety interlocks.
+- Worked across PLC I/O, pulse/direction motion, machine state logic, and hardware/software integration to diagnose real machine behavior rather than only simulated software.
+
 ## Featured Work
 
 ### [Robotics Control Core](https://github.com/tahazarif10/robotics-control-core)
