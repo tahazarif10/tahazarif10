@@ -78,16 +78,20 @@ Evidence:
 - [final v0.3 merged-main CI #34386081006](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/actions/runs/34386081006)
 - [verification record](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/blob/main/docs/VERIFICATION.md)
 
-### v0.4 — observability, fault injection, and replay
+### v0.4 — replay, observability, fault injection, and CI isolation
 
-Verified completed slices:
+Status: **complete**
 
-- runtime diagnostics with stable stop reasons
-- NaN odometry fault injection
-- stale odometry and stale path fault injection
-- zero-command safe-stop verification
-- real rosbag2 sqlite3 generation from a checked-in fixture
-- same bag replayed twice through the live lifecycle adapter with equal canonical outcome
+Verified capabilities:
+
+- lifecycle diagnostics with stable stop reasons and input-age observability
+- NaN, stale-odometry, and stale-path fault injection with zero-command safe stop
+- real rosbag2 sqlite3 generation from a checked-in source fixture
+- same bag replayed twice through the live C++ lifecycle adapter with equal canonical outcomes
+- checked-in replay contract: **8 messages**, **1.2 s** recorded span, **2.0×** configured pacing
+- bounded replay/controller metrics: wall duration, max linear command, command samples, diagnostic samples
+- missing-global-TF fault injection: `bt_navigator` stays non-ACTIVE and no non-zero `cmd_vel` is produced
+- concurrent ROS test-graph contamination diagnosed from CI and fixed with test namespaces + serialized Nav2 fixtures, without weakening collision assertions
 
 Evidence:
 
@@ -95,8 +99,13 @@ Evidence:
 - [PR #10 merged-main CI #34388363553](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/actions/runs/34388363553)
 - [rosbag replay PR #11](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/pull/11)
 - [rosbag replay merged-main CI #34389798773](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/actions/runs/34389798773)
+- [missing-TF + metrics PR #12](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/pull/12)
+- [PR #12 CI #34394204856](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/actions/runs/34394204856)
+- [test-graph isolation PR #13](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/pull/13)
+- [final v0.4 merged-main CI #34395404807](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/actions/runs/34395404807)
+- [repository verification record](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/blob/main/docs/VERIFICATION.md)
 
-The remaining v0.4 work is tracked in the repository issue and is not claimed complete here.
+These are deterministic software/system-integration results, not physical safety certification or hardware-performance claims.
 
 ## Upstream Open-Source Contributions
 

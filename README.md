@@ -40,9 +40,9 @@ A middleware-independent C++20 robotics core for differential-drive navigation: 
 
 ### [ROS 2 Autonomous Mobile Robot](https://github.com/tahazarif10/ros2-autonomous-mobile-robot)
 
-A ROS 2 Jazzy / Ubuntu 24.04 autonomous-mobile-robot stack developed in evidence-driven milestones. v0.3 adds a deterministic Nav2 system fixture on top of the lifecycle control-core adapter.
+A ROS 2 Jazzy / Ubuntu 24.04 autonomous-mobile-robot stack developed in evidence-driven milestones through **v0.4**: lifecycle control, deterministic Nav2 integration, observability, fault injection, and rosbag2 replay.
 
-**Public engineering evidence:** hosted `colcon build` / `colcon test` CI; a C++20 lifecycle adapter consuming `robotics-control-core` at a pinned commit; bounded `cmd_vel` and safe-stop behavior for stale/missing/non-finite input; NavFn A* planning; Regulated Pure Pursuit; a checked-in 6 m × 6 m static-map fixture; explicit `map -> odom -> base_link -> base_scan` ownership; documented QoS contracts; lifecycle-aware navigation-goal submission; and end-to-end assertions for goal success, obstacle clearance, final position tolerance, and a non-trivial detour. All navigation results are explicitly scoped to the deterministic software fixture rather than physical hardware.
+**Public engineering evidence:** hosted `colcon build` / `colcon test` CI; a C++20 lifecycle adapter consuming `robotics-control-core` at a pinned commit; bounded `cmd_vel` and safe-stop behavior for stale/missing/non-finite input; NavFn A* + Regulated Pure Pursuit; runtime TF/QoS verification; diagnostics with stable stop reasons; NaN/stale-input fault injection; a real sqlite3 rosbag generated from checked-in source data and replayed twice with equal canonical outcomes; missing-global-TF fail-closed verification; and a diagnosed/fixed concurrent ROS test-graph contamination bug using namespace isolation. All results are scoped to deterministic software fixtures rather than physical hardware.
 
 ### [Local AI Desktop Copilot](https://github.com/tahazarif10/local-ai-desktop-copilot)
 
@@ -62,10 +62,10 @@ I contribute focused fixes and tests to existing projects, with an emphasis on r
 
 ## Currently Building Toward
 
-- rosbag replay, deterministic fault injection, and navigation observability
-- Real-time embedded systems and RTOS work
+- Real-time embedded systems and Zephyr RTOS
 - Sensor and communication interfaces
-- Reproducible simulation and later hardware validation
+- Deterministic embedded fault handling and telemetry
+- Reproducible simulation followed by hardware validation
 - Focused upstream robotics/embedded open-source contributions
 
 I’m particularly interested in software that has to interact reliably with the physical world.

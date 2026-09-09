@@ -26,14 +26,14 @@ Robotics and embedded-software focused developer with hands-on industrial automa
 
 ### Selected Project — [ros2-autonomous-mobile-robot](https://github.com/tahazarif10/ros2-autonomous-mobile-robot)
 
-- Built a reproducible **ROS 2 Jazzy / Ubuntu 24.04** AMR workspace with a differential-drive Xacro model and headless launch verification.
-- Added a **C++20 lifecycle control adapter** that consumes `robotics-control-core` at a pinned commit instead of duplicating algorithm code.
-- Converts `nav_msgs/Path` and `nav_msgs/Odometry` into the middleware-independent control contract and publishes bounded `geometry_msgs/Twist` commands.
-- Implements explicit safe-stop behavior for missing, stale, and non-finite inputs and for goal completion.
-- Added a deterministic **Nav2 v0.3** system fixture using Nav2 Loopback Simulator, a checked-in 6 m × 6 m static map, NavFn with A* enabled, and Regulated Pure Pursuit.
-- Defined and runtime-tested the `map -> odom -> base_link -> base_scan` TF chain and documented the fixture QoS contracts.
-- Added an end-to-end `NavigateToPose` test that verifies successful goal completion, obstacle clearance, final position error within 0.20 m, and a non-trivial detour around the central obstacle.
-- Hosted GitHub Actions CI verifies dependency resolution, `colcon build`, `colcon test`, lifecycle transitions, invalid-configuration rejection, TF availability, and the deterministic Nav2 fixture. Navigation evidence is explicitly scoped to the checked-in simulation fixture, not hardware performance.
+- Built a reproducible **ROS 2 Jazzy / Ubuntu 24.04** AMR workspace and a **C++20 lifecycle control adapter** that consumes `robotics-control-core` at a pinned commit rather than duplicating algorithm code.
+- Implemented bounded `geometry_msgs/Twist` output with explicit safe-stop behavior for missing, stale, and non-finite inputs and goal completion.
+- Added a deterministic Nav2 fixture using a checked-in 6 m × 6 m map, **NavFn A***, **Regulated Pure Pursuit**, explicit TF ownership, QoS contracts, and end-to-end goal/collision assertions.
+- Added runtime diagnostics with stable stop reasons plus fault injection for NaN odometry, stale odometry, and stale paths; verified zero-command fail-closed behavior.
+- Generated a real **rosbag2 sqlite3** fixture from checked-in source data and replayed the same bag twice through the live lifecycle adapter with equal canonical outcomes; the fixture contains 8 messages spanning 1.2 s of recorded time at 2.0× configured pacing.
+- Verified missing-global-TF behavior by removing the `map -> odom` / `odom -> base_link` provider and asserting that `bt_navigator` never becomes ACTIVE and no non-zero `cmd_vel` is produced.
+- Diagnosed and fixed a concurrent ROS test-graph contamination failure without weakening collision assertions by namespace-isolating integration fixtures and serializing Nav2 launch tests.
+- GitHub Actions verifies the full `rosdep` / `colcon build` / `colcon test` suite; the final v0.4 merged-main run is public engineering evidence.
 
 ### Open Source Contributions
 
@@ -54,7 +54,7 @@ Robotics and embedded-software focused developer with hands-on industrial automa
 
 ### Current Direction
 
-rosbag replay · deterministic fault injection · real-time embedded systems · RTOS · sensor/communication interfaces · autonomous navigation and control
+Zephyr RTOS · real-time embedded systems · sensor/communication interfaces · deterministic fault handling · hardware validation · autonomous navigation and control
 
 ---
 
