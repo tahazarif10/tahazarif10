@@ -4,7 +4,7 @@
 
 # Hi, I'm Taha 👋
 
-[**Public Technical Resume**](./RESUME.md)
+[**Public Technical Resume**](./RESUME.md) · [**LinkedIn**](https://www.linkedin.com/in/taha-zarif-bba94b397/)
 
 I build software around robotics, embedded systems, and real-time applications, with a focus on reliability, deterministic behavior, testing, and debugging.
 
@@ -19,7 +19,7 @@ I build software around robotics, embedded systems, and real-time applications, 
 ## Tech
 
 **Languages:** C++, Python, C#  
-**Platforms & Tools:** Linux, Git, CMake, .NET, Arduino  
+**Platforms & Tools:** Linux, Git, CMake, ROS 2, .NET, Arduino  
 **Engineering:** Unit Testing, CI, Debugging, Software Architecture
 
 ## Industrial Engineering Work
@@ -40,9 +40,9 @@ A middleware-independent C++20 robotics core for differential-drive navigation: 
 
 ### [ROS 2 Autonomous Mobile Robot](https://github.com/tahazarif10/ros2-autonomous-mobile-robot)
 
-A ROS 2 Jazzy / Ubuntu 24.04 autonomous-mobile-robot stack developed in evidence-driven milestones. The current v0.2 baseline includes a differential-drive Xacro model, headless launch verification, and a C++20 lifecycle adapter that consumes the standalone `robotics-control-core` package at a pinned commit.
+A ROS 2 Jazzy / Ubuntu 24.04 autonomous-mobile-robot stack developed in evidence-driven milestones. v0.3 adds a deterministic Nav2 system fixture on top of the lifecycle control-core adapter.
 
-**Public engineering evidence:** hosted `colcon build` / `colcon test` CI, Path + Odometry conversion, bounded `cmd_vel`, explicit stale/missing/non-finite input safe-stop behavior, lifecycle transition tests, invalid-configuration tests, and milestone verification records.
+**Public engineering evidence:** hosted `colcon build` / `colcon test` CI; a C++20 lifecycle adapter consuming `robotics-control-core` at a pinned commit; bounded `cmd_vel` and safe-stop behavior for stale/missing/non-finite input; NavFn A* planning; Regulated Pure Pursuit; a checked-in 6 m × 6 m static-map fixture; explicit `map -> odom -> base_link -> base_scan` ownership; documented QoS contracts; lifecycle-aware navigation-goal submission; and end-to-end assertions for goal success, obstacle clearance, final position tolerance, and a non-trivial detour. All navigation results are explicitly scoped to the deterministic software fixture rather than physical hardware.
 
 ### [Local AI Desktop Copilot](https://github.com/tahazarif10/local-ai-desktop-copilot)
 
@@ -62,9 +62,10 @@ I contribute focused fixes and tests to existing projects, with an emphasis on r
 
 ## Currently Building Toward
 
-- Nav2 integration, localization, and autonomous navigation
-- Real-time embedded systems
+- rosbag replay, deterministic fault injection, and navigation observability
+- Real-time embedded systems and RTOS work
 - Sensor and communication interfaces
-- Reproducible simulation and hardware validation
+- Reproducible simulation and later hardware validation
+- Focused upstream robotics/embedded open-source contributions
 
 I’m particularly interested in software that has to interact reliably with the physical world.

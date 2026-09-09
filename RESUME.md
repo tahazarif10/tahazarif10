@@ -2,7 +2,8 @@
 
 ## Robotics & Embedded Software
 
-**GitHub:** [tahazarif10](https://github.com/tahazarif10)
+**GitHub:** [tahazarif10](https://github.com/tahazarif10)  
+**LinkedIn:** [linkedin.com/in/taha-zarif-bba94b397](https://www.linkedin.com/in/taha-zarif-bba94b397/)
 
 ### Profile
 
@@ -28,7 +29,10 @@ Robotics and embedded-software focused developer with hands-on industrial automa
 - Added a **C++20 lifecycle control adapter** that consumes `robotics-control-core` at a pinned commit instead of duplicating algorithm code.
 - Converts `nav_msgs/Path` and `nav_msgs/Odometry` into the middleware-independent control contract and publishes bounded `geometry_msgs/Twist` commands.
 - Implements explicit safe-stop behavior for missing, stale, and non-finite inputs and for goal completion.
-- Hosted GitHub Actions CI verifies dependency resolution, `colcon build`, `colcon test`, lifecycle transitions, invalid-configuration rejection, and the earlier Xacro/launch baseline.
+- Added a deterministic **Nav2 v0.3** system fixture using Nav2 Loopback Simulator, a checked-in 6 m × 6 m static map, NavFn with A* enabled, and Regulated Pure Pursuit.
+- Defined and runtime-tested the `map -> odom -> base_link -> base_scan` TF chain and documented the fixture QoS contracts.
+- Added an end-to-end `NavigateToPose` test that verifies successful goal completion, obstacle clearance, final position error within 0.20 m, and a non-trivial detour around the central obstacle.
+- Hosted GitHub Actions CI verifies dependency resolution, `colcon build`, `colcon test`, lifecycle transitions, invalid-configuration rejection, TF availability, and the deterministic Nav2 fixture. Navigation evidence is explicitly scoped to the checked-in simulation fixture, not hardware performance.
 
 ### Open Source Contributions
 
@@ -41,13 +45,13 @@ Robotics and embedded-software focused developer with hands-on industrial automa
 ### Technical Skills
 
 **Languages:** C++20, Python, C#  
-**Systems & Tooling:** Linux, Git, CMake, GitHub Actions, CI/CD, Docker, ROS 2 Jazzy, colcon, ament_cmake  
+**Systems & Tooling:** Linux, Git, CMake, GitHub Actions, CI/CD, Docker, ROS 2 Jazzy, Nav2, TF2, colcon, ament_cmake  
 **Engineering:** Unit Testing, Debugging, Software Architecture, deterministic regression, CodeQL, ASan/UBSan  
 **Industrial / Motion:** PLC, Modbus TCP, servo motion, pulse/direction, CNC automation, hardware/software integration
 
 ### Current Direction
 
-Nav2 integration · localization · real-time embedded systems · sensor/communication interfaces · autonomous navigation and control
+rosbag replay · deterministic fault injection · real-time embedded systems · RTOS · sensor/communication interfaces · autonomous navigation and control
 
 ---
 
