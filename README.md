@@ -22,6 +22,12 @@ I build software around robotics, embedded systems, and real-time applications, 
 
 ## Featured Work
 
+### [Robotics Control Core](https://github.com/tahazarif10/robotics-control-core)
+
+A middleware-independent C++20 robotics core for differential-drive navigation: deterministic A* planning, PID control, forward/inverse kinematics, SE(2) odometry, and closed-loop path tracking.
+
+Built as an installable CMake package with multi-compiler CI across GCC, Clang, and MSVC, ASan/UBSan, CodeQL, deterministic regression tests, Docker, reusable package-consumer verification, and evidence-backed engineering documentation.
+
 ### [Local AI Desktop Copilot](https://github.com/tahazarif10/local-ai-desktop-copilot)
 
 A privacy-first Windows desktop copilot project focused on controlled context sensing, strict privacy boundaries, deterministic behavior, and testable system architecture.
