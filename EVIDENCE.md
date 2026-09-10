@@ -107,9 +107,72 @@ Evidence:
 
 These are deterministic software/system-integration results, not physical safety certification or hardware-performance claims.
 
+## Embedded RTOS Sensor Hub — C / Zephyr
+
+Repository: [embedded-rtos-sensor-hub](https://github.com/tahazarif10/embedded-rtos-sensor-hub)
+
+Baseline:
+
+- Zephyr **v4.4.2** pinned by `west.yml`
+- Ubuntu 24.04 hosted CI
+- `native_sim/native`
+- host GNU toolchain
+- ztest/Twister
+
+### v0.1 — bounded RTOS core
+
+Verified capabilities:
+
+- five statically defined threads: two producers, consumer, supervisor, telemetry
+- bounded `k_msgq` producer/consumer pipeline
+- `k_sem` startup synchronization
+- `k_mutex` protected shared metrics
+- fixed-size messages and no application data-path heap allocation
+- software heartbeat watchdog logic
+- queue drop and high-watermark accounting
+- deterministic vibration-producer stall injection
+- stale transition, de-duplication, and recovery tests
+
+Evidence:
+
+- [PR #1](https://github.com/tahazarif10/embedded-rtos-sensor-hub/pull/1)
+- [PR CI #34406892562](https://github.com/tahazarif10/embedded-rtos-sensor-hub/actions/runs/34406892562) — success
+- [merged-main CI #34407100161](https://github.com/tahazarif10/embedded-rtos-sensor-hub/actions/runs/34407100161) — success
+- 5/5 v0.1 ztest cases passed
+
+### v0.2 — acquisition driver boundary and recovery
+
+Status: **complete**
+
+Verified capabilities:
+
+- abstract bus read boundary used by producer threads
+- simulated I2C-style temperature transaction: device `0x48`, register `0x00`
+- simulated SPI-style vibration transaction: device `0x01`, register `0x10`
+- fixed 32-bit little-endian sample decode
+- bounded retry policy with transfer/retry/failed-read metrics
+- deterministic transient bus-fault injection
+- retry recovery and retry-exhaustion tests
+- per-sensor sequence-gap rejection with tracking resynchronization
+- timestamp-regression rejection without poisoning the accepted baseline
+- normal, producer-stall, and bus-fault hosted `native_sim` builds
+- **12/12 Twister test cases passed (100%)** on merged `main`
+
+Evidence:
+
+- [Issue #2](https://github.com/tahazarif10/embedded-rtos-sensor-hub/issues/2)
+- [PR #3](https://github.com/tahazarif10/embedded-rtos-sensor-hub/pull/3)
+- PR head `6339d60f9c82c6f1317fa2e98e51de5013ad85ab`
+- [PR CI #34493289155](https://github.com/tahazarif10/embedded-rtos-sensor-hub/actions/runs/34493289155) — success
+- merge commit `156903b57eb5525849094a76ca851349a9b0fc34`
+- [merged-main CI #34493673687](https://github.com/tahazarif10/embedded-rtos-sensor-hub/actions/runs/34493673687) — success
+- [verification record](https://github.com/tahazarif10/embedded-rtos-sensor-hub/blob/main/docs/VERIFICATION.md)
+
+This is native-simulation software evidence. It does not establish physical I2C/SPI timing, electrical behavior, sensor accuracy, ISR latency, hardware-watchdog behavior, or safety certification.
+
 ## Upstream Open-Source Contributions
 
-**6 merged upstream pull requests** verified as of 2026-09-09:
+**6 merged upstream pull requests** verified as of 2026-09-10:
 
 1. Robotics Toolbox for Python — [PR #644](https://github.com/petercorke/robotics-toolbox-python/pull/644) — restored missing distance-transform diagonal.
 2. Motrix — [PR #1885](https://github.com/agalwood/Motrix/pull/1885) — restored tray left-click window toggling.
@@ -122,8 +185,8 @@ These are deterministic software/system-integration results, not physical safety
 
 Not counted as merged achievements:
 
-- Zephyr RTOS — [PR #118636](https://github.com/zephyrproject-rtos/zephyr/pull/118636), Bluetooth HCI documentation/API-reference scope clarification; full visible CI is green and the PR is still under review.
-- Robotics Toolbox for Python — [PR #667](https://github.com/petercorke/robotics-toolbox-python/pull/667), numerical IK pre-step convergence fix with regression test; visible CI is green and the PR is still under review.
+- Zephyr RTOS — [PR #118636](https://github.com/zephyrproject-rtos/zephyr/pull/118636), Bluetooth HCI documentation/API-reference scope clarification; two human approvals have been observed and the PR remains open.
+- Robotics Toolbox for Python — [PR #667](https://github.com/petercorke/robotics-toolbox-python/pull/667), numerical IK pre-step convergence fix with regression test; visible CI is green and the PR remains open.
 
 ## Industrial Automation Experience
 

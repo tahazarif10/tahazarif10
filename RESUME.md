@@ -8,7 +8,7 @@
 
 ### Profile
 
-Robotics and embedded-software focused developer with hands-on industrial automation experience spanning CNC control software, PLC I/O, servo motion, safety/readiness state logic, and hardware/software debugging. Builds testable C++ and Python systems with explicit contracts, deterministic regression evidence, CI, and reproducible engineering workflows.
+Robotics and embedded-software focused developer with hands-on industrial automation experience spanning CNC control software, PLC I/O, servo motion, safety/readiness state logic, and hardware/software debugging. Builds testable C/C++ and Python systems with explicit contracts, bounded resources, deterministic regression evidence, CI, and fault-injection workflows.
 
 ### Selected Industrial Engineering Work
 
@@ -33,7 +33,16 @@ Robotics and embedded-software focused developer with hands-on industrial automa
 - Generated a real **rosbag2 sqlite3** fixture from checked-in source data and replayed the same bag twice through the live lifecycle adapter with equal canonical outcomes; the fixture contains 8 messages spanning 1.2 s of recorded time at 2.0× configured pacing.
 - Verified missing-global-TF behavior by removing the `map -> odom` / `odom -> base_link` provider and asserting that `bt_navigator` never becomes ACTIVE and no non-zero `cmd_vel` is produced.
 - Diagnosed and fixed a concurrent ROS test-graph contamination failure without weakening collision assertions by namespace-isolating integration fixtures and serializing Nav2 launch tests.
-- GitHub Actions verifies the full `rosdep` / `colcon build` / `colcon test` suite; the final v0.4 merged-main run is public engineering evidence.
+
+### Selected Project — [embedded-rtos-sensor-hub](https://github.com/tahazarif10/embedded-rtos-sensor-hub)
+
+- Built a **C / Zephyr RTOS 4.4.2** sensor hub on `native_sim` with five statically defined threads, a bounded `k_msgq` pipeline, `k_sem` startup synchronization, and `k_mutex` protected state.
+- Implemented software heartbeat supervision with stale-event detection/recovery, queue-drop accounting, and queue high-watermark metrics while keeping the application data path heap-free.
+- Added an explicit sensor acquisition/driver boundary with simulated **I2C-style** temperature and **SPI-style** vibration transaction contracts.
+- Implemented a bounded bus retry policy with transfer/retry/failure metrics, per-sensor sequence-continuity checks with resynchronization, and timestamp-regression rejection.
+- Added deterministic producer-stall and transient bus-fault injection and verified normal, stall, and bus-fault configurations in hosted GitHub Actions.
+- Expanded the **ztest/Twister** regression suite to **12/12 passing test cases** on merged `main`, covering driver contracts, retry/recovery, retry exhaustion, sequence gaps, timestamp regression, queue behavior, and health supervision.
+- Evidence is deliberately scoped to native simulation; no physical I2C/SPI timing, electrical behavior, or hardware-watchdog claim is made.
 
 ### Open Source Contributions
 
@@ -45,16 +54,20 @@ Robotics and embedded-software focused developer with hands-on industrial automa
 - **Orchestrator MCP** — merged PR #11: fixed delegated review-synthesis input.
 - **GPS-Denied UAV Navigation** — merged PR #28: preserved fail-closed handling for invalid TDOA localization data.
 
+Currently under upstream review and not counted as merged: **Zephyr RTOS PR #118636** and **Robotics Toolbox for Python PR #667**.
+
 ### Technical Skills
 
-**Languages:** C++20, Python, C#  
-**Systems & Tooling:** Linux, Git, CMake, GitHub Actions, CI/CD, Docker, ROS 2 Jazzy, Nav2, TF2, colcon, ament_cmake  
-**Engineering:** Unit Testing, Debugging, Software Architecture, deterministic regression, CodeQL, ASan/UBSan  
+**Languages:** C, C++20, Python, C#  
+**Robotics:** ROS 2 Jazzy, Nav2, TF2, lifecycle nodes, rosbag2, differential-drive navigation  
+**Embedded / RTOS:** Zephyr RTOS, native_sim, ztest/Twister, `k_msgq`, threads, mutexes, semaphores, bounded retries, fault injection, simulated I2C/SPI driver contracts  
+**Systems & Tooling:** Linux, Git, CMake, GitHub Actions, CI/CD, Docker, colcon, ament_cmake  
+**Engineering:** Unit/Integration Testing, Debugging, Software Architecture, deterministic regression, fault injection, CodeQL, ASan/UBSan  
 **Industrial / Motion:** PLC, Modbus TCP, servo motion, pulse/direction, CNC automation, hardware/software integration
 
 ### Current Direction
 
-Zephyr RTOS · real-time embedded systems · sensor/communication interfaces · deterministic fault handling · hardware validation · autonomous navigation and control
+Embedded telemetry transport · backpressure/recovery · physical sensor/bus qualification · hardware watchdogs · autonomous navigation and control
 
 ---
 
