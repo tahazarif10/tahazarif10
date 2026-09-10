@@ -30,6 +30,12 @@ Selected hands-on work on CNC and industrial automation systems:
 - Implemented and debugged servo-axis motion for saw and clamp mechanisms, including millimetre-to-pulse conversion, homing, jog, busy/done state, limits, alarms, and readiness/safety interlocks.
 - Worked across PLC I/O, pulse/direction motion, machine state logic, and hardware/software integration to diagnose real machine behavior rather than only simulated software.
 
+## Robotics Competition Experience
+
+- **FIRA Iran robotics competition** — national-level **3rd-place finish**.
+- **Iran 2026 FIRA Open Competition** — participant with **Kamaan** in **Air Autonomous Race (U19)**, adding hands-on competition exposure to autonomous aerial robotics.
+- **Iran 2025 FIRA Open Competition** — participant with **Kamaan 3** in **Cliff Hanger Lightweight (U19)**.
+
 ## Featured Work
 
 ### [Robotics Control Core](https://github.com/tahazarif10/robotics-control-core)
