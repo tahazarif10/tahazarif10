@@ -32,6 +32,7 @@ Selected hands-on work on CNC and industrial automation systems:
 
 ## Robotics Competition Experience
 
+- **FIRA RoboWorld Cup 2024 — São Luís, Brazil** — participant with **Kamaan Shahriar Iran** at the global FIRA competition; participant badge retained. Reported **4th-place finish**.
 - **FIRA Iran robotics competition** — national-level **3rd-place finish**.
 - **Iran 2026 FIRA Open Competition** — participant with **Kamaan** in **Air Autonomous Race (U19)**, adding hands-on competition exposure to autonomous aerial robotics.
 - **Iran 2025 FIRA Open Competition** — participant with **Kamaan 3** in **Cliff Hanger Lightweight (U19)**.
