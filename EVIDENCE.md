@@ -170,7 +170,23 @@ Evidence:
 
 This is native-simulation software evidence. It does not establish physical I2C/SPI timing, electrical behavior, sensor accuracy, ISR latency, hardware-watchdog behavior, or safety certification.
 
-## Robotics Competition Experience — FIRA Iran
+## Robotics Competition Experience — FIRA
+
+### FIRA RoboWorld Cup 2024 — Brazil
+
+- Event: **FIRA RoboWorld Cup 2024**
+- Location: **São Luís, Maranhão, Brazil**
+- Dates: **5–9 August 2024**
+- Participant: **Taha Zarif**
+- Team on participant badge: **Kamaan Shahriar Iran**
+- Participant-provided physical event badge confirms attendance.
+- Reported competition result: **4th place**. A public official ranking entry for this team/result has not yet been located, so the placement is presented as participant-provided rather than independently verified.
+- Official AVIS event page: https://events.avisengine.com/events/fira-2024
+- Official FIRA event listing: https://firaworldcup.org/
+
+The current AVIS 2024 event page exists, but its public awards page currently returns **"No awards found for this event."** This is consistent with incomplete historical award/badge data and may explain why the 2024 participant badge is absent from the current "My Badges" dashboard. It does not imply non-participation.
+
+### FIRA Iran
 
 Participant badges supplied for two FIRA Iran competitions:
 
