@@ -1,6 +1,8 @@
 # Engineering Evidence
 
-This page links resume claims to public, reproducible evidence. Performance claims are scoped to the exact checked-in fixtures that produced them.
+This page maps public portfolio and resume claims to reproducible evidence. Performance claims are scoped to the exact checked-in fixtures that produced them.
+
+[Profile](./README.md) · [Technical Resume](./RESUME.md) · [LinkedIn](https://www.linkedin.com/in/taha-zarif-bba94b397/)
 
 ## Robotics Control Core — C++20
 
@@ -162,7 +164,6 @@ Evidence:
 
 - [Issue #2](https://github.com/tahazarif10/embedded-rtos-sensor-hub/issues/2)
 - [PR #3](https://github.com/tahazarif10/embedded-rtos-sensor-hub/pull/3)
-- PR head `6339d60f9c82c6f1317fa2e98e51de5013ad85ab`
 - [PR CI #34493289155](https://github.com/tahazarif10/embedded-rtos-sensor-hub/actions/runs/34493289155) — success
 - merge commit `156903b57eb5525849094a76ca851349a9b0fc34`
 - [merged-main CI #34493673687](https://github.com/tahazarif10/embedded-rtos-sensor-hub/actions/runs/34493673687) — success
@@ -178,32 +179,38 @@ This is native-simulation software evidence. It does not establish physical I2C/
 - Location: **São Luís, Maranhão, Brazil**
 - Dates: **5–9 August 2024**
 - Participant: **Taha Zarif**
-- Team on participant badge: **Kamaan Shahriar Iran**
-- Participant-provided physical event badge confirms attendance.
-- Reported competition result: **4th place**. A public official ranking entry for this team/result has not yet been located, so the placement is presented as participant-provided rather than independently verified.
-- Official AVIS event page: https://events.avisengine.com/events/fira-2024
-- Official FIRA event listing: https://firaworldcup.org/
+- Team: **Kamaan Shahriar Iran**
+- League: **Cliff Hanger Lightweight (U14)**
+- Team result: **4th place**
 
-The current AVIS 2024 event page exists, but its public awards page currently returns **"No awards found for this event."** This is consistent with incomplete historical award/badge data and may explain why the 2024 participant badge is absent from the current "My Badges" dashboard. It does not imply non-participation.
+Public evidence:
+
+- [Official AVIS FIRA 2024 team roster](https://events.avisengine.com/events/fira-2024/teams) — lists **Kamaan Shahriar Iran** under **Cliff Hanger Lightweight (U14)** with Final status confirmed, and lists **Taha Zarif** as a **Youth Member** of that team.
+- [Pooria Noori — public LinkedIn profile](https://ir.linkedin.com/in/pooria-noori-782869280) — the team's coach publicly lists **4th Place in Fira Robo World Cup 2024 Brazil as Coach**, **Cliff Hanger League**.
+- A physical FIRA RoboWorld Cup 2024 participant badge retained by Taha shows **Taha Zarif**, **Kamaan Shahriar Iran**, São Luís, Brazil, and the event dates.
+
+The current AVIS historical awards endpoint for the 2024 event returns **"No awards found for this event"**, so the placement is not represented there. The roster itself does independently confirm Taha's participation, team, league, and final registration status; the 4th-place result is corroborated by the coach's public award record.
+
+AVIS also lists the same team roster in **Mission Impossible (U14)**. The portfolio foregrounds **Cliff Hanger Lightweight (U14)** because that is the league associated with the 4th-place result.
 
 ### FIRA Iran
 
-Participant badges supplied for two FIRA Iran competitions:
+Participant records supplied for two FIRA Iran competitions:
 
-- **Iran 2026 FIRA Open Competition** — team **Kamaan**, **Air Autonomous Race (U19)**, Tehran, 17–21 July 2026. Team record: [AVIS dashboard](https://events.avisengine.com/dashboard/teams/787559c0-d862-45a4-987f-343b13a0690f). Official event: [Iran 2026 FIRA Open Competition](https://events.avisengine.com/events/iran-2026-fira-open-competition).
-- **Iran 2025 FIRA Open Competition** — team **Kamaan 3**, **Cliff Hanger Lightweight (U19)**, Tehran, 15–18 April 2025. Team record: [AVIS dashboard](https://events.avisengine.com/dashboard/teams/dcdcb284-d966-4060-9ae5-48a20081cb94). Official event: [Iran 2025 FIRA Open Competition](https://events.avisengine.com/events/iran-2025-fira-open-competition).
-- A **3rd-place national FIRA Iran finish** is included in the resume from the participant-provided competition record. The specific public award-page mapping to the supplied team badges has not yet been independently matched, so this page does not attach the placement to a particular league until that result record is identified.
+- **Iran 2026 FIRA Open Competition** — team **Kamaan**, **Air Autonomous Race (U19)**, Tehran, 17–21 July 2026. [Team dashboard record](https://events.avisengine.com/dashboard/teams/787559c0-d862-45a4-987f-343b13a0690f) · [Official event](https://events.avisengine.com/events/iran-2026-fira-open-competition)
+- **Iran 2025 FIRA Open Competition** — team **Kamaan 3**, **Cliff Hanger Lightweight (U19)**, Tehran, 15–18 April 2025. [Team dashboard record](https://events.avisengine.com/dashboard/teams/dcdcb284-d966-4060-9ae5-48a20081cb94) · [Official event](https://events.avisengine.com/events/iran-2025-fira-open-competition)
+- A **3rd-place national FIRA Iran finish** is retained from the participant-provided competition record. The exact public award-page mapping has not yet been identified, so this evidence page does not attach that placement to a specific year or league.
 
-This competition experience is separate from the software benchmark evidence above and is included as hands-on robotics/aerial-robotics participation.
+This competition experience is separate from the software benchmark evidence above and is included as hands-on robotics and autonomous-robotics participation.
 
 ## Upstream Open-Source Contributions
 
 **6 merged upstream pull requests** verified as of 2026-09-10:
 
-1. Robotics Toolbox for Python — [PR #644](https://github.com/petercorke/robotics-toolbox-python/pull/644) — restored missing distance-transform diagonal.
-2. Motrix — [PR #1885](https://github.com/agalwood/Motrix/pull/1885) — restored tray left-click window toggling.
+1. Robotics Toolbox for Python — [PR #644](https://github.com/petercorke/robotics-toolbox-python/pull/644) — restored a missing distance-transform diagonal and added regression coverage.
+2. Motrix — [PR #1885](https://github.com/agalwood/Motrix/pull/1885) — restored tray left-click window toggling and strengthened platform-behavior regression tests after maintainer review.
 3. DQ QuestionBank Core — [PR #127](https://github.com/wzsisshadiao-crypto/dq-questionbank-core/pull/127) — editor draft autosave/crash recovery.
-4. DQ QuestionBank Core — [PR #128](https://github.com/wzsisshadiao-crypto/dq-questionbank-core/pull/128) — preserved table-row shape in editor.
+4. DQ QuestionBank Core — [PR #128](https://github.com/wzsisshadiao-crypto/dq-questionbank-core/pull/128) — preserved table-row shape in the editor.
 5. Orchestrator MCP — [PR #11](https://github.com/crAK1644/orchestrator-mcp/pull/11) — fixed delegated review-synthesis input.
 6. GPS-Denied UAV Navigation — [PR #28](https://github.com/smshagor-dev/UVA-GPS-Denied-Navigation-in-Dynamic-Environments/pull/28) — preserved fail-closed handling for invalid TDOA localization data.
 
@@ -211,8 +218,8 @@ This competition experience is separate from the software benchmark evidence abo
 
 Not counted as merged achievements:
 
-- Zephyr RTOS — [PR #118636](https://github.com/zephyrproject-rtos/zephyr/pull/118636), Bluetooth HCI documentation/API-reference scope clarification; two human approvals have been observed and the PR remains open.
-- Robotics Toolbox for Python — [PR #667](https://github.com/petercorke/robotics-toolbox-python/pull/667), numerical IK pre-step convergence fix with regression test; visible CI is green and the PR remains open.
+- **Zephyr RTOS** — [PR #118636](https://github.com/zephyrproject-rtos/zephyr/pull/118636), `Bluetooth: HCI: clarify pairing error scope`. Open, non-draft, mergeable at the latest check; two human approvals were observed during review.
+- **Robotics Toolbox for Python** — [PR #667](https://github.com/petercorke/robotics-toolbox-python/pull/667), `fix: check numerical IK convergence before solver step`. Open, non-draft, mergeable at the latest check; includes exact-`q0` regression coverage. A Codecov bot comment reports patch-coverage configuration output, so this file does not characterize the PR as fully green until upstream review/CI resolves.
 
 ## Industrial Automation Experience
 
