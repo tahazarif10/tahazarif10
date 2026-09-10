@@ -18,6 +18,7 @@ Robotics and embedded-software focused developer with hands-on industrial automa
 
 ### Robotics Competition Experience
 
+- Competed at the **FIRA RoboWorld Cup 2024** in **São Luís, Maranhão, Brazil** with **Kamaan Shahriar Iran**; participant badge retained. Reported **4th-place finish**.
 - Achieved a **3rd-place national finish** in a FIRA Iran robotics competition.
 - Participated in the **Iran 2026 FIRA Open Competition** with team **Kamaan** in **Air Autonomous Race (U19)**, gaining competition exposure in autonomous aerial robotics.
 - Participated in the **Iran 2025 FIRA Open Competition** with team **Kamaan 3** in **Cliff Hanger Lightweight (U19)**.
@@ -65,7 +66,7 @@ Currently under upstream review and not counted as merged: **Zephyr RTOS PR #118
 ### Technical Skills
 
 **Languages:** C, C++20, Python, C#  
-**Robotics:** ROS 2 Jazzy, Nav2, TF2, lifecycle nodes, rosbag2, differential-drive navigation, autonomous aerial robotics competition exposure  
+**Robotics:** ROS 2 Jazzy, Nav2, TF2, lifecycle nodes, rosbag2, differential-drive navigation, FIRA RoboWorld Cup competition experience, autonomous aerial robotics competition exposure  
 **Embedded / RTOS:** Zephyr RTOS, native_sim, ztest/Twister, `k_msgq`, threads, mutexes, semaphores, bounded retries, fault injection, simulated I2C/SPI driver contracts  
 **Systems & Tooling:** Linux, Git, CMake, GitHub Actions, CI/CD, Docker, colcon, ament_cmake  
 **Engineering:** Unit/Integration Testing, Debugging, Software Architecture, deterministic regression, fault injection, CodeQL, ASan/UBSan  
