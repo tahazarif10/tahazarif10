@@ -170,6 +170,16 @@ Evidence:
 
 This is native-simulation software evidence. It does not establish physical I2C/SPI timing, electrical behavior, sensor accuracy, ISR latency, hardware-watchdog behavior, or safety certification.
 
+## Robotics Competition Experience — FIRA Iran
+
+Participant badges supplied for two FIRA Iran competitions:
+
+- **Iran 2026 FIRA Open Competition** — team **Kamaan**, **Air Autonomous Race (U19)**, Tehran, 17–21 July 2026. Team record: [AVIS dashboard](https://events.avisengine.com/dashboard/teams/787559c0-d862-45a4-987f-343b13a0690f). Official event: [Iran 2026 FIRA Open Competition](https://events.avisengine.com/events/iran-2026-fira-open-competition).
+- **Iran 2025 FIRA Open Competition** — team **Kamaan 3**, **Cliff Hanger Lightweight (U19)**, Tehran, 15–18 April 2025. Team record: [AVIS dashboard](https://events.avisengine.com/dashboard/teams/dcdcb284-d966-4060-9ae5-48a20081cb94). Official event: [Iran 2025 FIRA Open Competition](https://events.avisengine.com/events/iran-2025-fira-open-competition).
+- A **3rd-place national FIRA Iran finish** is included in the resume from the participant-provided competition record. The specific public award-page mapping to the supplied team badges has not yet been independently matched, so this page does not attach the placement to a particular league until that result record is identified.
+
+This competition experience is separate from the software benchmark evidence above and is included as hands-on robotics/aerial-robotics participation.
+
 ## Upstream Open-Source Contributions
 
 **6 merged upstream pull requests** verified as of 2026-09-10:
