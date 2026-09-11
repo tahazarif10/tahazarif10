@@ -6,9 +6,9 @@
 
 ### Robotics & Embedded Software
 
-I build software for **robotics, embedded systems, real-time applications, and industrial automation**, with a focus on deterministic behavior, reliability, testing, fault handling, and hardware/software debugging.
+Grade 10 student building software for **robotics, embedded systems, real-time applications, and industrial automation**, with a focus on deterministic behavior, reliability, testing, fault handling, and hardware/software debugging.
 
-[**Technical Resume**](./RESUME.md) · [**Engineering Evidence**](./EVIDENCE.md) · [**LinkedIn**](https://www.linkedin.com/in/taha-zarif-bba94b397/) · [**Repositories**](https://github.com/tahazarif10?tab=repositories)
+[**Recruiter Resume**](./RESUME.md) · [**Engineering Evidence**](./EVIDENCE.md) · [**LinkedIn**](https://www.linkedin.com/in/taha-zarif-bba94b397/) · [**Repositories**](https://github.com/tahazarif10?tab=repositories)
 
 ## Open-Source Contributions
 
@@ -54,6 +54,10 @@ Hands-on CNC and industrial automation work includes:
 - **Iran 2025 FIRA Open Competition** — **Kamaan 3**, **Cliff Hanger Lightweight (U19)**. [Team record](https://events.avisengine.com/dashboard/teams/dcdcb284-d966-4060-9ae5-48a20081cb94)
 
 Competition sources and evidence notes are maintained in [EVIDENCE.md](./EVIDENCE.md#robotics-competition-experience--fira).
+
+## Training
+
+Linux Foundation Training course completions: **LFD123 Open Source RT-Thread RTOS on RISC-V**, **LFEL1002 Getting Started with Rust**, and **LFD102 A Beginner's Guide to Open Source Software Development**.
 
 ## Core Focus
 
