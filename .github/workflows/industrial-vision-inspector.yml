@@ -1,0 +1,28 @@
+name: industrial-vision-inspector
+
+on:
+  push:
+    paths:
+      - "projects/industrial-vision-inspector/**"
+      - ".github/workflows/industrial-vision-inspector.yml"
+  pull_request:
+    paths:
+      - "projects/industrial-vision-inspector/**"
+      - ".github/workflows/industrial-vision-inspector.yml"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e "projects/industrial-vision-inspector[dev]"
+      - name: Test
+        run: pytest projects/industrial-vision-inspector/tests

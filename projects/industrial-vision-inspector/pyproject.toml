@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "industrial-vision-inspector"
+version = "0.1.0"
+description = "Reproducible Python/OpenCV/PyTorch pipeline for industrial surface-defect classification."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Taha Zarif"}]
+dependencies = [
+  "numpy>=1.26",
+  "opencv-python-headless>=4.9",
+  "pandas>=2.2",
+  "Pillow>=10.2",
+  "scikit-learn>=1.4",
+  "matplotlib>=3.8",
+  "torch>=2.2",
+  "torchvision>=0.17",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+ivi = "industrial_vision_inspector.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"
