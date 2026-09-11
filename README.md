@@ -4,9 +4,9 @@
 
 # Taha Zarif
 
-### Robotics & Embedded Software
+### Robotics, Embedded Software & Computer Vision
 
-Grade 10 student building software for **robotics, embedded systems, real-time applications, and industrial automation**, with a focus on deterministic behavior, reliability, testing, fault handling, and hardware/software debugging.
+Grade 10 student building software for **robotics, embedded systems, computer vision, real-time applications, and industrial automation**, with a focus on deterministic behavior, reliability, testing, fault handling, and hardware/software debugging.
 
 [**Recruiter Resume**](./RESUME.md) · [**Engineering Evidence**](./EVIDENCE.md) · [**LinkedIn**](https://www.linkedin.com/in/taha-zarif-bba94b397/) · [**Repositories**](https://github.com/tahazarif10?tab=repositories)
 
@@ -30,6 +30,7 @@ Grade 10 student building software for **robotics, embedded systems, real-time a
 
 | Project | Engineering focus | Public evidence |
 | --- | --- | --- |
+| [**Industrial Vision Inspector**](./projects/industrial-vision-inspector/README.md) | Python · OpenCV · PyTorch · CNN / ResNet-18 · deterministic NEU-CLS preparation · image-quality metrics | **7/7 local tests** · deterministic synthetic smoke verification · evidence-scoped model card |
 | [**Robotics Control Core**](https://github.com/tahazarif10/robotics-control-core) | C++20 · A* · path smoothing · PID · pure pursuit · kinematics · SE(2) odometry | Multi-compiler CI · ASan/UBSan · CodeQL · deterministic benchmarks |
 | [**ROS 2 Autonomous Mobile Robot**](https://github.com/tahazarif10/ros2-autonomous-mobile-robot) | ROS 2 Jazzy · Nav2 · lifecycle control · TF/QoS · rosbag2 replay · fault injection | `colcon` CI · fail-closed tests · replay equality · integration-test isolation |
 | [**Embedded RTOS Sensor Hub**](https://github.com/tahazarif10/embedded-rtos-sensor-hub) | C · Zephyr RTOS 4.4.2 · bounded queues · supervision · bus retries · fault injection | `native_sim` · **12/12 ztest/Twister** · hosted CI |
@@ -62,6 +63,7 @@ Linux Foundation Training course completions: **LFD123 Open Source RT-Thread RTO
 ## Core Focus
 
 **Languages:** C, C++, Python, C#  
+**AI / Computer Vision:** OpenCV, PyTorch, CNNs, ResNet-18, image preprocessing, classification, model evaluation  
 **Robotics:** ROS 2, Nav2, TF2, rosbag2, differential-drive navigation  
 **Embedded / RTOS:** Zephyr RTOS, ztest/Twister, bounded queues, synchronization, fault injection  
 **Systems:** Linux, Git, CMake, GitHub Actions, Docker, CodeQL, ASan/UBSan  
@@ -69,7 +71,7 @@ Linux Foundation Training course completions: **LFD123 Open Source RT-Thread RTO
 
 ## Current Direction
 
-Embedded telemetry transport · backpressure/recovery · physical sensor/bus qualification · hardware watchdogs · autonomous navigation/control · upstream robotics/embedded contributions
+Industrial computer vision · autonomous navigation/control · embedded telemetry transport · physical sensor/bus qualification · hardware watchdogs · upstream robotics/embedded contributions
 
 ---
 

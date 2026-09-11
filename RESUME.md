@@ -1,13 +1,13 @@
 # Taha Zarif
 
-## Robotics & Embedded Software
+## Robotics, Embedded Software & Computer Vision
 
 **Mashhad, Iran**  
 **GitHub:** [github.com/tahazarif10](https://github.com/tahazarif10) · **LinkedIn:** [linkedin.com/in/taha-zarif-bba94b397](https://www.linkedin.com/in/taha-zarif-bba94b397/) · **Evidence:** [EVIDENCE.md](./EVIDENCE.md)
 
 ### Profile
 
-Grade 10 student focused on robotics, embedded software, and industrial automation. Builds testable C/C++ and Python systems with deterministic regression evidence, bounded-resource design, CI, fault injection, and hardware/software debugging. Public work includes **6 merged upstream pull requests**, ROS 2/Zephyr projects, and hands-on PLC/servo/CNC integration.
+Grade 10 student focused on robotics, embedded software, computer vision, and industrial automation. Builds testable C/C++ and Python systems with deterministic regression evidence, bounded-resource design, CI, fault injection, and hardware/software debugging. Public work includes **6 merged upstream pull requests**, ROS 2/Zephyr projects, a Python/OpenCV/PyTorch industrial-vision pipeline, and hands-on PLC/servo/CNC integration.
 
 ### Education
 
@@ -15,6 +15,7 @@ Grade 10 student focused on robotics, embedded software, and industrial automati
 
 ### Selected Engineering Projects
 
+- **[Industrial Vision Inspector](./projects/industrial-vision-inspector/README.md)** — Python/OpenCV/PyTorch surface-defect classification pipeline with classical image-quality metrics, CLAHE/denoise preprocessing, deterministic NEU-CLS data preparation with SHA-256 manifests, TinyCNN and ResNet-18 model paths, standard classification metrics, checkpointed inference, and annotated prediction output. **7/7 local tests passed**; synthetic smoke results are explicitly separated from real-dataset performance claims.
 - **[Robotics Control Core](https://github.com/tahazarif10/robotics-control-core)** — C++20 differential-drive navigation/control library with occupancy-grid A*, obstacle inflation, collision-safe smoothing, PID, interpolated-lookahead pure pursuit, kinematics, and SE(2) odometry. GCC/Clang/MSVC CI, ASan/UBSan, CodeQL, CMake packaging, deterministic benchmarks.
 - **[ROS 2 Autonomous Mobile Robot](https://github.com/tahazarif10/ros2-autonomous-mobile-robot)** — ROS 2 Jazzy / Ubuntu 24.04 AMR stack with lifecycle control, Nav2, TF/QoS contracts, diagnostics, fault injection, rosbag2 replay, missing-TF fail-closed verification, and isolated integration tests.
 - **[Embedded RTOS Sensor Hub](https://github.com/tahazarif10/embedded-rtos-sensor-hub)** — C / Zephyr RTOS 4.4.2 sensor hub using static threads, bounded `k_msgq`, semaphores/mutexes, heartbeat supervision, bounded retries, sequence/timestamp checks, deterministic fault injection, and **12/12 ztest/Twister** cases on `native_sim`.
@@ -53,6 +54,7 @@ Linux Foundation Training course completions, September 2026:
 ### Technical Skills
 
 **Languages:** C, C++20, Python, C#  
+**AI / Computer Vision:** OpenCV, PyTorch, CNNs, ResNet-18, image preprocessing, transfer-learning workflow, classification, accuracy/precision/recall/F1 evaluation  
 **Robotics:** ROS 2 Jazzy, Nav2, TF2, lifecycle nodes, rosbag2, differential-drive navigation  
 **Embedded / RTOS:** Zephyr RTOS, ztest/Twister, `k_msgq`, threads, mutexes, semaphores, bounded retries, fault injection  
 **Systems:** Linux, Git, CMake, GitHub Actions, Docker, CodeQL, ASan/UBSan  
