@@ -30,7 +30,7 @@ Grade 10 student building software for **robotics, embedded systems, computer vi
 
 | Project | Engineering focus | Public evidence |
 | --- | --- | --- |
-| [**Industrial Vision Inspector**](./projects/industrial-vision-inspector/README.md) | Python · OpenCV · PyTorch · CNN / ResNet-18 · deterministic NEU-CLS preparation · image-quality metrics | **7/7 local tests** · deterministic synthetic smoke verification · evidence-scoped model card |
+| [**Industrial Vision Inspector**](https://github.com/tahazarif10/industrial-vision-inspector) | Python · OpenCV · PyTorch · CNN / ResNet-18 · deterministic NEU-CLS preparation · image-quality metrics | **7/7 local tests** · deterministic synthetic smoke verification · evidence-scoped model card |
 | [**Robotics Control Core**](https://github.com/tahazarif10/robotics-control-core) | C++20 · A* · path smoothing · PID · pure pursuit · kinematics · SE(2) odometry | Multi-compiler CI · ASan/UBSan · CodeQL · deterministic benchmarks |
 | [**ROS 2 Autonomous Mobile Robot**](https://github.com/tahazarif10/ros2-autonomous-mobile-robot) | ROS 2 Jazzy · Nav2 · lifecycle control · TF/QoS · rosbag2 replay · fault injection | `colcon` CI · fail-closed tests · replay equality · integration-test isolation |
 | [**Embedded RTOS Sensor Hub**](https://github.com/tahazarif10/embedded-rtos-sensor-hub) | C · Zephyr RTOS 4.4.2 · bounded queues · supervision · bus retries · fault injection | `native_sim` · **12/12 ztest/Twister** · hosted CI |
