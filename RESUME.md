@@ -7,7 +7,7 @@
 
 ### Profile
 
-Grade 10 student focused on robotics, embedded software, computer vision, and industrial automation. Builds testable C/C++ and Python systems with deterministic regression evidence, bounded-resource design, CI, fault injection, and hardware/software debugging. Public work includes **6 merged upstream pull requests**, ROS 2/Zephyr projects, a Python/OpenCV/PyTorch industrial-vision pipeline, and hands-on PLC/servo/CNC integration.
+Grade 10 student focused on robotics, embedded software, computer vision, and industrial automation. Builds testable C/C++ and Python systems with deterministic regression evidence, bounded-resource design, CI, fault injection, and hardware/software debugging. Public work includes **8 merged upstream pull requests**, including contributions to **Zephyr RTOS** and **Robotics Toolbox for Python**, plus ROS 2/Zephyr projects, a Python/OpenCV/PyTorch industrial-vision pipeline, and hands-on PLC/servo/CNC integration.
 
 ### Education
 
@@ -20,21 +20,23 @@ Grade 10 student focused on robotics, embedded software, computer vision, and in
 - **[ROS 2 Autonomous Mobile Robot](https://github.com/tahazarif10/ros2-autonomous-mobile-robot)** — ROS 2 Jazzy / Ubuntu 24.04 AMR stack with lifecycle control, Nav2, TF/QoS contracts, diagnostics, fault injection, rosbag2 replay, missing-TF fail-closed verification, and isolated integration tests.
 - **[Embedded RTOS Sensor Hub](https://github.com/tahazarif10/embedded-rtos-sensor-hub)** — C / Zephyr RTOS 4.4.2 sensor hub using static threads, bounded `k_msgq`, semaphores/mutexes, heartbeat supervision, bounded retries, sequence/timestamp checks, deterministic fault injection, and **12/12 ztest/Twister** cases on `native_sim`.
 
+### Open-Source Contributions
+
+**8 merged upstream PRs** across embedded systems, robotics, desktop software, frontend, orchestration, and localization.
+
+- **Zephyr RTOS — [PR #118636](https://github.com/zephyrproject-rtos/zephyr/pull/118636):** clarified that HCI status `0x29` is BR/EDR-only and aligned public API/test documentation with the Bluetooth specification.
+- **Robotics Toolbox for Python — [PR #667](https://github.com/petercorke/robotics-toolbox-python/pull/667):** fixed numerical IK convergence ordering so an exact initial solution is accepted before solver update; added regression coverage.
+- **Robotics Toolbox for Python — [PR #644](https://github.com/petercorke/robotics-toolbox-python/pull/644):** restored a missing distance-transform diagonal and added regression coverage.
+- **Motrix — [PR #1885](https://github.com/agalwood/Motrix/pull/1885):** restored tray left-click window toggling and strengthened cross-platform tests after maintainer review.
+- **GPS-Denied UAV Navigation — [PR #28](https://github.com/smshagor-dev/UVA-GPS-Denied-Navigation-in-Dynamic-Environments/pull/28):** preserved fail-closed behavior for invalid/non-finite TDOA localization data.
+- **DQ QuestionBank Core — [PR #127](https://github.com/wzsisshadiao-crypto/dq-questionbank-core/pull/127):** editor draft autosave and crash recovery.
+- **DQ QuestionBank Core — [PR #128](https://github.com/wzsisshadiao-crypto/dq-questionbank-core/pull/128):** preserved table-row shape in the editor.
+- **Orchestrator MCP — [PR #11](https://github.com/crAK1644/orchestrator-mcp/pull/11):** fixed delegated review-synthesis input and added regression coverage.
+
 ### Industrial Automation & CNC
 
 - Developed Python/PyQt control software integrating with **Delta AS228T-series PLCs** over Modbus TCP.
 - Implemented and debugged pulse/direction servo motion for CNC saw and clamp axes, including mm-to-pulse conversion, homing, jog, busy/done states, limits, alarms, readiness, and safety interlocks.
-
-### Open-Source Contributions
-
-**6 merged upstream PRs** across robotics, desktop software, frontend, orchestration, and localization projects.
-
-- **Robotics Toolbox for Python — [PR #644](https://github.com/petercorke/robotics-toolbox-python/pull/644):** restored a missing distance-transform diagonal and added regression coverage.
-- **Motrix — [PR #1885](https://github.com/agalwood/Motrix/pull/1885):** restored tray left-click window toggling and strengthened cross-platform tests after maintainer review.
-- **GPS-Denied UAV Navigation — [PR #28](https://github.com/smshagor-dev/UVA-GPS-Denied-Navigation-in-Dynamic-Environments/pull/28):** preserved fail-closed behavior for invalid/non-finite TDOA localization data.
-- Additional merged work: DQ QuestionBank Core [#127](https://github.com/wzsisshadiao-crypto/dq-questionbank-core/pull/127) / [#128](https://github.com/wzsisshadiao-crypto/dq-questionbank-core/pull/128), Orchestrator MCP [#11](https://github.com/crAK1644/orchestrator-mcp/pull/11).
-
-**Under upstream review — not counted as merged:** Zephyr RTOS [#118636](https://github.com/zephyrproject-rtos/zephyr/pull/118636) and Robotics Toolbox for Python [#667](https://github.com/petercorke/robotics-toolbox-python/pull/667).
 
 ### Robotics Competition Experience
 
