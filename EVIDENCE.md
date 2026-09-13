@@ -185,7 +185,7 @@ This is native-simulation software evidence. It does not establish physical I2C/
 
 Public evidence:
 
-- [Official AVIS FIRA 2024 team roster](https://events.avisengine.com/events/fira-2024/teams) — lists **Kamaan Shahriar Iran** under **Cliff Hanger Lightweight (U14)** with Final status confirmed, and lists **Taha Zarif** as a **Youth Member** of that team.
+- [Official AVIS FIRA 2024 team roster](https://events.avisengine.com/events/fira-2024/teams) — lists **Kamaan Shahriar Iran** under **Cliff Hanger Lightweight (U14)** with Final status confirmed, and lists **Taha Zarif** as a **Youth Member** of the team.
 - [Pooria Noori — public LinkedIn profile](https://ir.linkedin.com/in/pooria-noori-782869280) — the team's coach publicly lists **4th Place in Fira Robo World Cup 2024 Brazil as Coach**, **Cliff Hanger League**.
 - A physical FIRA RoboWorld Cup 2024 participant badge retained by Taha shows **Taha Zarif**, **Kamaan Shahriar Iran**, São Luís, Brazil, and the event dates.
 
@@ -205,21 +205,18 @@ This competition experience is separate from the software benchmark evidence abo
 
 ## Upstream Open-Source Contributions
 
-**6 merged upstream pull requests** verified as of 2026-09-10:
+**8 merged upstream pull requests** verified as of 2026-09-13:
 
-1. Robotics Toolbox for Python — [PR #644](https://github.com/petercorke/robotics-toolbox-python/pull/644) — restored a missing distance-transform diagonal and added regression coverage.
-2. Motrix — [PR #1885](https://github.com/agalwood/Motrix/pull/1885) — restored tray left-click window toggling and strengthened platform-behavior regression tests after maintainer review.
-3. DQ QuestionBank Core — [PR #127](https://github.com/wzsisshadiao-crypto/dq-questionbank-core/pull/127) — editor draft autosave/crash recovery.
-4. DQ QuestionBank Core — [PR #128](https://github.com/wzsisshadiao-crypto/dq-questionbank-core/pull/128) — preserved table-row shape in the editor.
-5. Orchestrator MCP — [PR #11](https://github.com/crAK1644/orchestrator-mcp/pull/11) — fixed delegated review-synthesis input.
-6. GPS-Denied UAV Navigation — [PR #28](https://github.com/smshagor-dev/UVA-GPS-Denied-Navigation-in-Dynamic-Environments/pull/28) — preserved fail-closed handling for invalid TDOA localization data.
+1. **Zephyr RTOS** — [PR #118636](https://github.com/zephyrproject-rtos/zephyr/pull/118636) — clarified that HCI status `0x29` (`Pairing with Unit Key Not Supported`) is valid for BR/EDR connections only; merged 2026-09-12.
+2. **Robotics Toolbox for Python** — [PR #667](https://github.com/petercorke/robotics-toolbox-python/pull/667) — fixed numerical IK convergence ordering so an initial configuration that already satisfies the target is accepted before a solver update; added regression coverage; merged 2026-09-12.
+3. **Robotics Toolbox for Python** — [PR #644](https://github.com/petercorke/robotics-toolbox-python/pull/644) — restored a missing distance-transform diagonal and added regression coverage.
+4. **Motrix** — [PR #1885](https://github.com/agalwood/Motrix/pull/1885) — restored tray left-click window toggling and strengthened platform-behavior regression tests after maintainer review.
+5. **DQ QuestionBank Core** — [PR #127](https://github.com/wzsisshadiao-crypto/dq-questionbank-core/pull/127) — editor draft autosave/crash recovery.
+6. **DQ QuestionBank Core** — [PR #128](https://github.com/wzsisshadiao-crypto/dq-questionbank-core/pull/128) — preserved table-row shape in the editor.
+7. **Orchestrator MCP** — [PR #11](https://github.com/crAK1644/orchestrator-mcp/pull/11) — fixed delegated review-synthesis input.
+8. **GPS-Denied UAV Navigation** — [PR #28](https://github.com/smshagor-dev/UVA-GPS-Denied-Navigation-in-Dynamic-Environments/pull/28) — preserved fail-closed handling for invalid TDOA localization data.
 
-### Currently in upstream review
-
-Not counted as merged achievements:
-
-- **Zephyr RTOS** — [PR #118636](https://github.com/zephyrproject-rtos/zephyr/pull/118636), `Bluetooth: HCI: clarify pairing error scope`. Open, non-draft, mergeable at the latest check; two human approvals were observed during review.
-- **Robotics Toolbox for Python** — [PR #667](https://github.com/petercorke/robotics-toolbox-python/pull/667), `fix: check numerical IK convergence before solver step`. Open, non-draft, mergeable at the latest check; includes exact-`q0` regression coverage. A Codecov bot comment reports patch-coverage configuration output, so this file does not characterize the PR as fully green until upstream review/CI resolves.
+The profile counts only PRs merged into repositories outside this account; self-repository PRs are intentionally excluded from the upstream contribution total.
 
 ## Industrial Automation Experience
 
