@@ -1,82 +1,57 @@
 <p align="center">
-  <img src="./banner.png" alt="Taha Zarif — Robotics & Embedded Software" width="100%">
+  <img src="./banner.png" alt="Taha Zarif — Systems & Robotics Software Engineering" width="100%">
 </p>
 
 # Taha Zarif
 
-### Robotics · Embedded Systems · Computer Vision · Industrial Automation
+### Systems & Robotics Software Engineer
+**Privacy-First Local AI · C++ / ROS 2 · Embedded / RTOS · Production-Grade Verification**
 
-Grade 10 student building testable software for **robotics, embedded/real-time systems, computer vision, and industrial automation**. I focus on deterministic behavior, bounded-resource design, fault handling, CI, reproducible verification, and hardware/software debugging.
+I build testable systems software across robotics, embedded/real-time systems, and privacy-aware desktop automation. My engineering work emphasizes deterministic behavior, bounded resources, explicit failure handling, reproducible verification, CI, and hardware/software debugging.
+
+Currently a Grade 10 student in Mashhad, Iran, with hands-on robotics competition and industrial CNC/PLC experience.
 
 [**Resume**](./RESUME.md) · [**Engineering Evidence**](./EVIDENCE.md) · [**LinkedIn**](https://www.linkedin.com/in/taha-zarif-bba94b397/) · [**Repositories**](https://github.com/tahazarif10?tab=repositories)
 
-## Highlights
+## Featured Engineering
 
-- **8 merged upstream pull requests**, including contributions to **Zephyr RTOS** and **Robotics Toolbox for Python**.
-- Built public robotics/embedded projects around **ROS 2, Nav2, Zephyr RTOS, C++20 control, OpenCV, and PyTorch**.
-- Hands-on industrial work with **Delta AS228T-series PLCs, Modbus TCP, pulse/direction servo control, homing, interlocks, and CNC debugging**.
-- **4th place — FIRA RoboWorld Cup 2024**, São Luís, Brazil, with Kamaan Shahriar Iran in Cliff Hanger Lightweight (U14).
+### [Robotics Control Core](https://github.com/tahazarif10/robotics-control-core)
+C++20 differential-drive control/navigation library with occupancy-grid A*, collision-safe path shaping, PID, pure pursuit, kinematics, and SE(2) odometry. Verified across GCC, Clang, and MSVC with ASan/UBSan, CodeQL, installable CMake packaging, and deterministic benchmarks.
 
-## Upstream Open-Source Contributions
+### [Local AI Desktop Copilot](https://github.com/tahazarif10/local-ai-desktop-copilot)
+Privacy-first Windows desktop copilot foundation built around bounded local context sensing, UI Automation, explicit privacy capabilities, deterministic orchestration, fault isolation, and strict Windows/cross-platform verification.
 
-| Project | Merged contribution | Engineering impact |
-| --- | --- | --- |
-| **Zephyr RTOS** | [PR #118636](https://github.com/zephyrproject-rtos/zephyr/pull/118636) | Clarified Bluetooth HCI status `0x29` scope for BR/EDR-only use across public API/test documentation. |
-| **Robotics Toolbox for Python** | [PR #667](https://github.com/petercorke/robotics-toolbox-python/pull/667) | Fixed numerical IK convergence ordering so an already-converged initial configuration is accepted before solver update; added regression coverage. |
-| **Robotics Toolbox for Python** | [PR #644](https://github.com/petercorke/robotics-toolbox-python/pull/644) | Restored a missing distance-transform diagonal and added focused regression coverage. |
-| **Motrix** | [PR #1885](https://github.com/agalwood/Motrix/pull/1885) | Restored Windows tray left-click window toggling and strengthened regression tests after maintainer review. |
-| **GPS-Denied UAV Navigation** | [PR #28](https://github.com/smshagor-dev/UVA-GPS-Denied-Navigation-in-Dynamic-Environments/pull/28) | Preserved fail-closed localization behavior for invalid/non-finite TDOA data. |
-| **DQ QuestionBank Core** | [PR #127](https://github.com/wzsisshadiao-crypto/dq-questionbank-core/pull/127) | Added editor draft autosave and crash recovery. |
-| **DQ QuestionBank Core** | [PR #128](https://github.com/wzsisshadiao-crypto/dq-questionbank-core/pull/128) | Preserved ragged table-row shape during editor round trips. |
-| **Orchestrator MCP** | [PR #11](https://github.com/crAK1644/orchestrator-mcp/pull/11) | Fixed delegated review-synthesis input and added regression coverage. |
+### [ROS 2 Autonomous Mobile Robot](https://github.com/tahazarif10/ros2-autonomous-mobile-robot)
+ROS 2 Jazzy/Nav2 system integration with lifecycle control, explicit TF/QoS contracts, stale/non-finite input handling, rosbag2 deterministic replay, diagnostics, fault injection, and fail-closed integration tests.
 
-## Selected Engineering Projects
+### [Embedded RTOS Sensor Hub](https://github.com/tahazarif10/embedded-rtos-sensor-hub)
+C/Zephyr RTOS sensor hub with static threads, bounded message queues, synchronization, supervision, bounded bus retries, sequence/timestamp validation, deterministic fault injection, and **12/12 ztest/Twister** cases on `native_sim`.
 
-| Project | Focus | Verification / evidence |
-| --- | --- | --- |
-| [**Industrial Vision Inspector**](https://github.com/tahazarif10/industrial-vision-inspector) | Python · OpenCV · PyTorch · CNN / ResNet-18 · deterministic NEU-CLS preparation · image-quality metrics | **7/7 local tests** · deterministic synthetic smoke verification · evidence-scoped model card |
-| [**Robotics Control Core**](https://github.com/tahazarif10/robotics-control-core) | C++20 · A* · obstacle inflation · path smoothing · PID · pure pursuit · kinematics · SE(2) odometry | GCC/Clang/MSVC CI · ASan/UBSan · CodeQL · deterministic benchmarks |
-| [**ROS 2 Autonomous Mobile Robot**](https://github.com/tahazarif10/ros2-autonomous-mobile-robot) | ROS 2 Jazzy · Nav2 · lifecycle control · TF/QoS · rosbag2 replay · fault injection | `colcon` CI · fail-closed tests · deterministic replay · integration-test isolation |
-| [**Embedded RTOS Sensor Hub**](https://github.com/tahazarif10/embedded-rtos-sensor-hub) | C · Zephyr RTOS 4.4.2 · bounded queues · supervision · bus retries · fault injection | `native_sim` · **12/12 ztest/Twister** · hosted CI |
-| [**Local AI Desktop Copilot**](https://github.com/tahazarif10/local-ai-desktop-copilot) | C#/.NET · WinUI · bounded context sensing · privacy gates · deterministic system design | Cross-platform core CI · strict Windows builds · explicit physical acceptance gates |
+**Also:** [Industrial Vision Inspector](https://github.com/tahazarif10/industrial-vision-inspector) — deterministic Python/OpenCV/PyTorch inspection pipeline with classical CV, TinyCNN/ResNet-18 paths, reproducible dataset preparation, metrics, and evidence-scoped evaluation.
 
-For exact benchmark scope, CI runs, limitations, and claim-level references, see [**Engineering Evidence**](./EVIDENCE.md).
+## Selected Open-Source Contributions
 
-## Industrial Automation & CNC
+**8 upstream pull requests merged.** Selected contributions:
 
-Hands-on engineering work includes:
+- **[Robotics Toolbox for Python #667](https://github.com/petercorke/robotics-toolbox-python/pull/667)** — fixed numerical IK convergence ordering so an already-converged initial configuration is accepted before the solver update; added regression coverage.
+- **[GPS-Denied UAV Navigation #28](https://github.com/smshagor-dev/UVA-GPS-Denied-Navigation-in-Dynamic-Environments/pull/28)** — preserved fail-closed localization behavior for invalid/non-finite TDOA data.
+- **[Motrix #1885](https://github.com/agalwood/Motrix/pull/1885)** — restored Windows tray left-click window toggling and strengthened cross-platform regression coverage after maintainer review.
+- **[Zephyr RTOS #118636](https://github.com/zephyrproject-rtos/zephyr/pull/118636)** — corrected public Bluetooth HCI documentation to clarify the BR/EDR-only scope of status `0x29`.
 
-- Python/PyQt control software integrating with **Delta AS228T-series PLCs** over Modbus TCP
-- pulse/direction servo motion for CNC saw and clamp axes
-- millimetre-to-pulse conversion, homing, jog, busy/done state logic, limits, alarms, and readiness/safety interlocks
-- PLC I/O and physical machine debugging
+All merged contributions and claim-level references are documented in [**Engineering Evidence**](./EVIDENCE.md).
 
-## Robotics Competition Experience
+## Industrial / Real-World Engineering
 
-- **4th place — FIRA RoboWorld Cup 2024**, São Luís, Maranhão, Brazil — **Kamaan Shahriar Iran**, **Cliff Hanger Lightweight (U14)**. [Official AVIS roster](https://events.avisengine.com/events/fira-2024/teams) lists **Taha Zarif** as a Youth Member of the team.
-- **Iran 2026 FIRA Open Competition** — Kamaan · Air Autonomous Race (U19).
-- **Iran 2025 FIRA Open Competition** — Kamaan 3 · Cliff Hanger Lightweight (U19).
-- **3rd-place national FIRA Iran finish** — retained as participant-provided competition history; exact public award-page mapping is still being identified.
+Hands-on work includes Python/PyQt control software with **Delta AS228T-series PLCs over Modbus TCP**, pulse/direction servo motion for CNC saw/clamp axes, millimetre-to-pulse conversion, homing/jog/state logic, limits, alarms, safety interlocks, and physical PLC/I/O debugging.
 
-Competition evidence and sourcing notes are maintained in [EVIDENCE.md](./EVIDENCE.md#robotics-competition-experience--fira).
+## Robotics
 
-## Training
+**4th place — FIRA RoboWorld Cup 2024**, São Luís, Brazil, with **Kamaan Shahriar Iran** in Cliff Hanger Lightweight (U14). Additional FIRA competition participation and sourcing are documented in [EVIDENCE.md](./EVIDENCE.md#robotics-competition-experience--fira).
 
-Linux Foundation Training completions:
+## Core Stack
 
-- **LFD123 — Open Source RT-Thread RTOS on RISC-V**
-- **LFEL1002 — Getting Started with Rust**
-- **LFD102 — A Beginner's Guide to Open Source Software Development**
-
-## Technical Focus
-
-**Languages:** C, C++20, Python, C#  
-**Robotics:** ROS 2 Jazzy, Nav2, TF2, lifecycle nodes, rosbag2, differential-drive navigation  
-**Embedded / RTOS:** Zephyr RTOS, ztest/Twister, bounded queues, synchronization, retries, fault injection  
-**AI / Computer Vision:** OpenCV, PyTorch, CNNs, ResNet-18, preprocessing, classification, evaluation  
-**Systems:** Linux, Git, CMake, GitHub Actions, Docker, CodeQL, ASan/UBSan  
-**Industrial:** PLC, Modbus TCP, servo motion, pulse/direction, CNC automation
+**C · C++20 · Python · C#/.NET · ROS 2 · Nav2 · Zephyr RTOS · OpenCV · PyTorch · Linux · CMake · GitHub Actions · CodeQL · ASan/UBSan · PLC/Modbus/Servo Automation**
 
 ---
 
-Performance, safety, and hardware claims are intentionally scoped. Reproducibility links and claim-level evidence are maintained in [**Engineering Evidence**](./EVIDENCE.md).
+Performance, safety, and hardware claims are intentionally scoped. Reproducibility links, CI evidence, benchmark boundaries, and full upstream contribution history are maintained in [**Engineering Evidence**](./EVIDENCE.md).
