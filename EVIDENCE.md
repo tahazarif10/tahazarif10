@@ -1,14 +1,47 @@
 # Engineering Evidence
 
-This page maps public portfolio and resume claims to reproducible evidence. Performance claims are scoped to the exact checked-in fixtures that produced them.
+This page maps public profile and resume claims to reproducible evidence. Performance, safety, hardware, and credential claims are deliberately scoped to the exact evidence available.
 
 [Profile](./README.md) · [Technical Resume](./RESUME.md) · [LinkedIn](https://www.linkedin.com/in/taha-zarif-bba94b397/)
+
+## Evidence policy
+
+- Upstream contribution counts include only pull requests merged into repositories **outside** the `tahazarif10` account.
+- Self-repository pull requests are project-development evidence, not upstream contribution count.
+- Simulation/hosted-CI results are not presented as physical-hardware performance.
+- Synthetic computer-vision smoke results are not presented as real-dataset accuracy.
+- Pending badges or credentials are not presented as earned until formally issued.
+
+## Local AI Desktop Copilot — Windows / .NET / WinUI 3
+
+Repository: [local-ai-desktop-copilot](https://github.com/tahazarif10/local-ai-desktop-copilot)
+
+Verified engineering foundation includes:
+
+- event-driven foreground observation and identity-first privacy evaluation
+- explicit Arm/Disarm lifecycle ownership
+- RAM-only Windows Graphics Capture and bounded latest-wins sensing
+- capability-based privacy, epoch invalidation, and stale-result rejection
+- dedicated COM MTA UI Automation worker
+- bounded non-text structural snapshots and separately authorized semantic snapshots
+- bounded M3.4 orchestration admission with debounce, deduplication, priority, and one-active/one-pending limits
+- controlled provider-isolation measurement and recovery evidence on physical Windows
+
+Provider-isolation evidence:
+
+- [M3.4 provider-isolation PR #23](https://github.com/tahazarif10/local-ai-desktop-copilot/pull/23) — merged
+- behavior-bearing head `44d4752864372116a911de2ae3acf611ef033c1e`
+- [CI #87](https://github.com/tahazarif10/local-ai-desktop-copilot/actions/runs/34899915173) — portable/Windows Core tests, PowerShell validation, controlled raw-provider cross-process smoke gate, and strict Windows build passed
+- physical measurement observed real provider entry, recovery on the existing worker before the 10-second request deadline, bounded shutdown, `joined=True`, and a clean randomized prohibited-content sentinel scan
+- ADR 0011 selected the existing in-process MTA UIA worker for the measured failure mode
+
+Scope boundary: this is still an engineering foundation rather than a complete AI assistant. OCR, model inference, voice, autonomous actions, elevation/`uiAccess`, and implicit cloud egress are not claimed as implemented capabilities.
 
 ## Robotics Control Core — C++20
 
 Repository: [robotics-control-core](https://github.com/tahazarif10/robotics-control-core)
 
-### Implemented
+Implemented and verified:
 
 - occupancy-grid A*
 - obstacle inflation and collision-safe path shaping
@@ -18,8 +51,7 @@ Repository: [robotics-control-core](https://github.com/tahazarif10/robotics-cont
 - installable CMake package `robotics::control`
 - independent `find_package` consumer verification
 - GCC / Clang / MSVC CI
-- ASan / UBSan
-- CodeQL
+- ASan / UBSan and CodeQL
 
 ### Deterministic v0.2 fixture
 
@@ -35,141 +67,140 @@ Evidence:
 - [CodeQL](https://github.com/tahazarif10/robotics-control-core/actions/runs/34357411019)
 - [verification record](https://github.com/tahazarif10/robotics-control-core/blob/main/docs/VERIFICATION.md)
 
-These metrics are deterministic regression-fixture evidence, not hardware-performance claims.
+These numbers are deterministic regression-fixture results, not universal controller or hardware-performance claims.
 
 ## ROS 2 Autonomous Mobile Robot
 
 Repository: [ros2-autonomous-mobile-robot](https://github.com/tahazarif10/ros2-autonomous-mobile-robot)
 
-### v0.2 — lifecycle control adapter
+Verified software/system-integration capabilities:
 
-- C++20 ROS 2 lifecycle node
-- consumes `robotics-control-core` at a pinned commit instead of copying algorithms
-- converts Path + Odometry inputs
-- bounded `cmd_vel`
-- safe stop for missing, stale, and non-finite input
-- invalid-configuration and lifecycle-transition tests
-
-Evidence:
-
-- [PR #6](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/pull/6)
-- [merged-main CI #34380715133](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/actions/runs/34380715133)
-
-### v0.3 — deterministic Nav2 integration
-
-Checked-in fixture:
-
-- ROS 2 Jazzy / Ubuntu 24.04
-- 6 m × 6 m static map
-- start `(-2.0, 0.0)`
-- goal `(2.0, 0.0)`
-- central obstacle blocks the direct path
-- NavFn with A* enabled
-- Regulated Pure Pursuit
-- explicit `map -> odom -> base_link -> base_scan` ownership
-- runtime TF verification
-- documented QoS contract
-- end-to-end `NavigateToPose` assertion
-- final fixture position tolerance ≤ 0.20 m
-- collision-clear detour required by the test
+- C++20 ROS 2 lifecycle control adapter consuming `robotics-control-core` at a pinned commit
+- bounded `cmd_vel` and safe-stop behavior for missing, stale, and non-finite inputs
+- ROS 2 Jazzy / Ubuntu 24.04 Nav2 fixture with explicit TF/QoS contracts
+- deterministic static-map obstacle-detour integration test
+- lifecycle diagnostics and stable stop reasons
+- NaN/stale-input fault injection
+- real rosbag2 sqlite3 generation and deterministic replay through the live lifecycle adapter
+- missing-global-TF fail-closed verification with no non-zero `cmd_vel`
+- ROS graph isolation fix after diagnosing cross-test contamination in hosted CI
 
 Evidence:
 
+- [lifecycle adapter PR #6](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/pull/6)
 - [Nav2 fixture PR #8](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/pull/8)
 - [TF/QoS PR #9](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/pull/9)
-- [final v0.3 merged-main CI #34386081006](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/actions/runs/34386081006)
+- [diagnostics/fault injection PR #10](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/pull/10)
+- [rosbag replay PR #11](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/pull/11)
+- [missing-TF + metrics PR #12](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/pull/12)
+- [test-graph isolation PR #13](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/pull/13)
+- [final v0.4 merged-main CI](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/actions/runs/34395404807)
 - [verification record](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/blob/main/docs/VERIFICATION.md)
 
-### v0.4 — replay, observability, fault injection, and CI isolation
-
-Status: **complete**
-
-Verified capabilities:
-
-- lifecycle diagnostics with stable stop reasons and input-age observability
-- NaN, stale-odometry, and stale-path fault injection with zero-command safe stop
-- real rosbag2 sqlite3 generation from a checked-in source fixture
-- same bag replayed twice through the live C++ lifecycle adapter with equal canonical outcomes
-- checked-in replay contract: **8 messages**, **1.2 s** recorded span, **2.0×** configured pacing
-- bounded replay/controller metrics: wall duration, max linear command, command samples, diagnostic samples
-- missing-global-TF fault injection: `bt_navigator` stays non-ACTIVE and no non-zero `cmd_vel` is produced
-- concurrent ROS test-graph contamination diagnosed from CI and fixed with test namespaces + serialized Nav2 fixtures, without weakening collision assertions
-
-Evidence:
-
-- [diagnostics/fault injection PR #10](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/pull/10)
-- [PR #10 merged-main CI #34388363553](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/actions/runs/34388363553)
-- [rosbag replay PR #11](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/pull/11)
-- [rosbag replay merged-main CI #34389798773](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/actions/runs/34389798773)
-- [missing-TF + metrics PR #12](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/pull/12)
-- [PR #12 CI #34394204856](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/actions/runs/34394204856)
-- [test-graph isolation PR #13](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/pull/13)
-- [final v0.4 merged-main CI #34395404807](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/actions/runs/34395404807)
-- [repository verification record](https://github.com/tahazarif10/ros2-autonomous-mobile-robot/blob/main/docs/VERIFICATION.md)
-
-These are deterministic software/system-integration results, not physical safety certification or hardware-performance claims.
+These are deterministic software/system-integration results, not physical safety certification or real-robot performance claims.
 
 ## Embedded RTOS Sensor Hub — C / Zephyr
 
 Repository: [embedded-rtos-sensor-hub](https://github.com/tahazarif10/embedded-rtos-sensor-hub)
 
-Baseline:
-
-- Zephyr **v4.4.2** pinned by `west.yml`
-- Ubuntu 24.04 hosted CI
-- `native_sim/native`
-- host GNU toolchain
-- ztest/Twister
-
-### v0.1 — bounded RTOS core
+Baseline: Zephyr **v4.4.2**, Ubuntu 24.04 hosted CI, `native_sim/native`, ztest/Twister.
 
 Verified capabilities:
 
-- five statically defined threads: two producers, consumer, supervisor, telemetry
+- five statically defined threads
 - bounded `k_msgq` producer/consumer pipeline
-- `k_sem` startup synchronization
-- `k_mutex` protected shared metrics
-- fixed-size messages and no application data-path heap allocation
-- software heartbeat watchdog logic
-- queue drop and high-watermark accounting
-- deterministic vibration-producer stall injection
-- stale transition, de-duplication, and recovery tests
+- `k_sem` startup synchronization and `k_mutex` protected metrics
+- fixed-size messages with no application data-path heap allocation
+- software heartbeat supervision
+- queue drop/high-watermark accounting and deterministic producer-stall injection
+- abstract bus-read boundary used by producer threads
+- simulated I2C-style temperature and SPI-style vibration transactions
+- bounded retry policy and deterministic transient bus-fault injection
+- sequence-gap and timestamp-regression rejection/recovery
+- normal, producer-stall, and bus-fault hosted builds
+- **12/12 Twister test cases passed** on merged `main`
 
 Evidence:
 
-- [PR #1](https://github.com/tahazarif10/embedded-rtos-sensor-hub/pull/1)
-- [PR CI #34406892562](https://github.com/tahazarif10/embedded-rtos-sensor-hub/actions/runs/34406892562) — success
-- [merged-main CI #34407100161](https://github.com/tahazarif10/embedded-rtos-sensor-hub/actions/runs/34407100161) — success
-- 5/5 v0.1 ztest cases passed
-
-### v0.2 — acquisition driver boundary and recovery
-
-Status: **complete**
-
-Verified capabilities:
-
-- abstract bus read boundary used by producer threads
-- simulated I2C-style temperature transaction: device `0x48`, register `0x00`
-- simulated SPI-style vibration transaction: device `0x01`, register `0x10`
-- fixed 32-bit little-endian sample decode
-- bounded retry policy with transfer/retry/failed-read metrics
-- deterministic transient bus-fault injection
-- retry recovery and retry-exhaustion tests
-- per-sensor sequence-gap rejection with tracking resynchronization
-- timestamp-regression rejection without poisoning the accepted baseline
-- normal, producer-stall, and bus-fault hosted `native_sim` builds
-- **12/12 Twister test cases passed (100%)** on merged `main`
-
-Evidence:
-
-- [Issue #2](https://github.com/tahazarif10/embedded-rtos-sensor-hub/issues/2)
-- [PR #3](https://github.com/tahazarif10/embedded-rtos-sensor-hub/pull/3)
-- [PR CI #34493289155](https://github.com/tahazarif10/embedded-rtos-sensor-hub/actions/runs/34493289155) — success
-- merge commit `156903b57eb5525849094a76ca851349a9b0fc34`
-- [merged-main CI #34493673687](https://github.com/tahazarif10/embedded-rtos-sensor-hub/actions/runs/34493673687) — success
+- [v0.1 PR #1](https://github.com/tahazarif10/embedded-rtos-sensor-hub/pull/1)
+- [v0.2 PR #3](https://github.com/tahazarif10/embedded-rtos-sensor-hub/pull/3)
+- [merged-main CI](https://github.com/tahazarif10/embedded-rtos-sensor-hub/actions/runs/34493673687)
 - [verification record](https://github.com/tahazarif10/embedded-rtos-sensor-hub/blob/main/docs/VERIFICATION.md)
 
 This is native-simulation software evidence. It does not establish physical I2C/SPI timing, electrical behavior, sensor accuracy, ISR latency, hardware-watchdog behavior, or safety certification.
+
+## Industrial Vision Inspector — Python / OpenCV / PyTorch
+
+Repository: [industrial-vision-inspector](https://github.com/tahazarif10/industrial-vision-inspector)
+
+Implemented portfolio pipeline:
+
+- classical image-quality metrics and deterministic preprocessing
+- reproducible NEU-CLS preparation path with SHA-256 manifests
+- TinyCNN and ResNet-18 model paths
+- train/evaluate/infer CLI
+- accuracy, macro precision/recall/F1, confusion matrix, training history, and annotated inference output
+- deterministic synthetic generator used for unit/smoke verification
+
+The checked synthetic smoke result is intentionally **not** represented as real NEU-CLS or manufacturing performance. Real held-out dataset benchmarking remains a separate evidence gate.
+
+## Upstream Open-Source Contributions
+
+**11 merged upstream pull requests across 7 external repositories, verified as of 2026-09-17.**
+
+### Zephyr RTOS — 2 merged PRs
+
+1. **[PR #118971](https://github.com/zephyrproject-rtos/zephyr/pull/118971) — Bluetooth: Host: add native_sim identity API tests**  
+   Added `native_sim` coverage for public Bluetooth identity-management APIs using `bt_enable()` and `bt_id_create()`, `bt_id_reset()`, `bt_id_delete()`, and `bt_id_get()` through the real Bluetooth host with a fake HCI driver rather than host-internal mocks.
+
+2. **[PR #118636](https://github.com/zephyrproject-rtos/zephyr/pull/118636) — Bluetooth: HCI: clarify pairing error scope**  
+   Clarified that HCI status `0x29` (`Pairing with Unit Key Not Supported`) is valid for BR/EDR connections only and aligned public disconnect/test-helper documentation with that scope.
+
+**Recognition status:** an application for the **Zephyr Technical Contributor** badge has been submitted. Review is pending; the badge is not claimed as earned until formally issued.
+
+### Robotics Toolbox for Python — 2 merged PRs
+
+3. **[PR #667](https://github.com/petercorke/robotics-toolbox-python/pull/667)** — fixed numerical IK convergence ordering so an already-converged initial configuration is accepted before a potentially singular solver update; updated solver residual handling and added regression coverage.
+
+4. **[PR #644](https://github.com/petercorke/robotics-toolbox-python/pull/644)** — restored the missing `[-1, 1]` distance-transform neighbor and added a regression for the unique shortest diagonal step.
+
+### Motrix — 2 merged PRs
+
+5. **[PR #2138](https://github.com/agalwood/Motrix/pull/2138)** — restored the macOS Menu Bar Only Dock-state invariant after main-window dismissal and added focused regression coverage. Fork CI covered macOS, Windows, and Linux.
+
+6. **[PR #1885](https://github.com/agalwood/Motrix/pull/1885)** — restored Windows tray left-click main-window toggling while preserving right-click and non-Windows menu behavior; regression coverage was strengthened in response to maintainer review.
+
+### DQ QuestionBank Core — 2 merged PRs
+
+7. **[PR #127](https://github.com/wzsisshadiao-crypto/dq-questionbank-core/pull/127)** — added collection-scoped editor draft autosave/crash recovery, dirty-state unload protection, restore/discard flow, and focused regression coverage.
+
+8. **[PR #128](https://github.com/wzsisshadiao-crypto/dq-questionbank-core/pull/128)** — fixed a round-trip data-preservation bug so ragged rows and trailing empty rows retain their canonical table shape; added DOM-level regression coverage.
+
+### Apache NuttX — 1 merged PR
+
+9. **[PR #20147](https://github.com/apache/nuttx/pull/20147)** — documented Python linting/formatting requirements (`black`, `isort`, `flake8`), `checkpatch.sh` verification/auto-format paths, and the existing pre-commit workflow; merged after maintainer approvals.
+
+### Orchestrator MCP — 1 merged PR
+
+10. **[PR #11](https://github.com/crAK1644/orchestrator-mcp/pull/11)** — fixed delegated synthesis so machine-readable review outcomes are provided from review storage while reviewer prose/usage is omitted; added end-to-end regression coverage.
+
+### GPS-Denied UAV Navigation — 1 merged PR
+
+11. **[PR #28](https://github.com/smshagor-dev/UVA-GPS-Denied-Navigation-in-Dynamic-Environments/pull/28)** — carried TDOA validity through confidence-floor and recovery/fusion paths so non-finite position/confidence data remains fail-closed; added focused regressions.
+
+## Industrial Automation Experience
+
+Public profile summary:
+
+- Python/PyQt control software with Delta AS228T-series PLC over Modbus TCP
+- pulse/direction servo motion for CNC saw/clamp axes
+- millimetre-to-pulse conversion
+- homing and jog logic
+- busy/done state handling
+- limits, alarms, readiness, and safety interlocks
+- physical PLC/I/O, sensor, servo, and machine-behavior debugging
+
+These are experience statements, not public hardware-performance benchmarks.
 
 ## Robotics Competition Experience — FIRA
 
@@ -185,49 +216,24 @@ This is native-simulation software evidence. It does not establish physical I2C/
 
 Public evidence:
 
-- [Official AVIS FIRA 2024 team roster](https://events.avisengine.com/events/fira-2024/teams) — lists **Kamaan Shahriar Iran** under **Cliff Hanger Lightweight (U14)** with Final status confirmed, and lists **Taha Zarif** as a **Youth Member** of the team.
-- [Pooria Noori — public LinkedIn profile](https://ir.linkedin.com/in/pooria-noori-782869280) — the team's coach publicly lists **4th Place in Fira Robo World Cup 2024 Brazil as Coach**, **Cliff Hanger League**.
-- A physical FIRA RoboWorld Cup 2024 participant badge retained by Taha shows **Taha Zarif**, **Kamaan Shahriar Iran**, São Luís, Brazil, and the event dates.
+- [Official AVIS FIRA 2024 team roster](https://events.avisengine.com/events/fira-2024/teams) lists **Kamaan Shahriar Iran** under Cliff Hanger Lightweight (U14) and **Taha Zarif** as a Youth Member.
+- [Pooria Noori — public LinkedIn profile](https://ir.linkedin.com/in/pooria-noori-782869280) publicly lists 4th place in FIRA RoboWorld Cup 2024 Brazil as coach in the Cliff Hanger league.
+- A physical FIRA RoboWorld Cup 2024 participant badge retained by Taha shows Taha Zarif, Kamaan Shahriar Iran, São Luís, Brazil, and the event dates.
 
-The current AVIS historical awards endpoint for the 2024 event returns **"No awards found for this event"**, so the placement is not represented there. The roster itself does independently confirm Taha's participation, team, league, and final registration status; the 4th-place result is corroborated by the coach's public award record.
-
-AVIS also lists the same team roster in **Mission Impossible (U14)**. The portfolio foregrounds **Cliff Hanger Lightweight (U14)** because that is the league associated with the 4th-place result.
+The current AVIS historical awards endpoint does not expose the placement, so the roster confirms participation/team/league while the 4th-place result is corroborated separately by the coach's public record.
 
 ### FIRA Iran
 
-Participant records supplied for two FIRA Iran competitions:
+- **Iran 2026 FIRA Open Competition** — Kamaan · Air Autonomous Race (U19) · Tehran · 17–21 July 2026.
+- **Iran 2025 FIRA Open Competition** — Kamaan 3 · Cliff Hanger Lightweight (U19) · Tehran · 15–18 April 2025.
+- A **3rd-place national FIRA Iran finish** is retained from participant-provided competition records; the exact public award-page mapping has not yet been identified, so it is not attached here to a specific year/league.
 
-- **Iran 2026 FIRA Open Competition** — team **Kamaan**, **Air Autonomous Race (U19)**, Tehran, 17–21 July 2026. [Team dashboard record](https://events.avisengine.com/dashboard/teams/787559c0-d862-45a4-987f-343b13a0690f) · [Official event](https://events.avisengine.com/events/iran-2026-fira-open-competition)
-- **Iran 2025 FIRA Open Competition** — team **Kamaan 3**, **Cliff Hanger Lightweight (U19)**, Tehran, 15–18 April 2025. [Team dashboard record](https://events.avisengine.com/dashboard/teams/dcdcb284-d966-4060-9ae5-48a20081cb94) · [Official event](https://events.avisengine.com/events/iran-2025-fira-open-competition)
-- A **3rd-place national FIRA Iran finish** is retained from the participant-provided competition record. The exact public award-page mapping has not yet been identified, so this evidence page does not attach that placement to a specific year or league.
+## Training / Credential Evidence
 
-This competition experience is separate from the software benchmark evidence above and is included as hands-on robotics and autonomous-robotics participation.
+Linux Foundation Training course completions, September 2026:
 
-## Upstream Open-Source Contributions
+- **Open Source RT-Thread RTOS on RISC-V (LFD123)** — Certificate ID `LF-o5csrgydp9`
+- **Getting Started with Rust (LFEL1002)** — Certificate ID `LF-f1vb0tcc5k`
+- **A Beginner's Guide to Open Source Software Development (LFD102)** — Certificate ID `LF-x7xjzo6yvn`
 
-**8 merged upstream pull requests** verified as of 2026-09-13:
-
-1. **Zephyr RTOS** — [PR #118636](https://github.com/zephyrproject-rtos/zephyr/pull/118636) — clarified that HCI status `0x29` (`Pairing with Unit Key Not Supported`) is valid for BR/EDR connections only; merged 2026-09-12.
-2. **Robotics Toolbox for Python** — [PR #667](https://github.com/petercorke/robotics-toolbox-python/pull/667) — fixed numerical IK convergence ordering so an initial configuration that already satisfies the target is accepted before a solver update; added regression coverage; merged 2026-09-12.
-3. **Robotics Toolbox for Python** — [PR #644](https://github.com/petercorke/robotics-toolbox-python/pull/644) — restored a missing distance-transform diagonal and added regression coverage.
-4. **Motrix** — [PR #1885](https://github.com/agalwood/Motrix/pull/1885) — restored tray left-click window toggling and strengthened platform-behavior regression tests after maintainer review.
-5. **DQ QuestionBank Core** — [PR #127](https://github.com/wzsisshadiao-crypto/dq-questionbank-core/pull/127) — editor draft autosave/crash recovery.
-6. **DQ QuestionBank Core** — [PR #128](https://github.com/wzsisshadiao-crypto/dq-questionbank-core/pull/128) — preserved table-row shape in the editor.
-7. **Orchestrator MCP** — [PR #11](https://github.com/crAK1644/orchestrator-mcp/pull/11) — fixed delegated review-synthesis input.
-8. **GPS-Denied UAV Navigation** — [PR #28](https://github.com/smshagor-dev/UVA-GPS-Denied-Navigation-in-Dynamic-Environments/pull/28) — preserved fail-closed handling for invalid TDOA localization data.
-
-The profile counts only PRs merged into repositories outside this account; self-repository PRs are intentionally excluded from the upstream contribution total.
-
-## Industrial Automation Experience
-
-Public profile summary:
-
-- Python/PyQt control software with Delta AS228T-series PLC over Modbus TCP
-- servo motion for CNC saw/clamp axes
-- millimetre-to-pulse conversion
-- homing and jog
-- busy/done state handling
-- limits, alarms, readiness and safety interlocks
-- pulse/direction motion and PLC I/O debugging on physical machinery
-
-These are experience statements, not public hardware benchmarks.
+The Zephyr Technical Contributor badge application is tracked separately above because it is still pending review.
