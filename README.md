@@ -29,6 +29,8 @@ Additional work: **[Industrial Vision Inspector](https://github.com/tahazarif10/
 - **[Motrix #1885](https://github.com/agalwood/Motrix/pull/1885)** — restored Windows tray left-click window toggling and strengthened cross-platform regression coverage after maintainer review.
 - **[Zephyr RTOS #118636](https://github.com/zephyrproject-rtos/zephyr/pull/118636)** — corrected public Bluetooth HCI documentation to clarify the BR/EDR-only scope of status `0x29`.
 
+**Zephyr recognition:** application submitted for the **Zephyr Technical Contributor** badge based on the merged Zephyr contribution above; review is pending. This is not presented as an earned credential until formally approved.
+
 Full merged-contribution history, CI references, benchmark boundaries, and claim-level evidence are maintained in [**Engineering Evidence**](./EVIDENCE.md).
 
 ## Industrial / Real-World Engineering
