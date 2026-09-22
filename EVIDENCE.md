@@ -14,12 +14,43 @@ This page maps public profile and resume claims to reproducible evidence. Perfor
 
 ## Applied AI Engineering — current evidence and boundary
 
-The public portfolio currently demonstrates applied AI in two complementary areas:
+The applied-AI portfolio is intentionally split into two independent public tracks:
 
-- **Industrial Vision Inspector** provides an end-to-end ML workflow: deterministic dataset preparation, PyTorch training, checkpointed inference, held-out evaluation tooling, model-card documentation, and explicit separation of synthetic smoke evidence from real-dataset claims.
-- **Local AI Desktop Copilot** provides the systems/privacy side of local AI: bounded sensing, capability-gated semantic context, stale-result rejection, provider-isolation measurement, and bounded orchestration.
+- **Grounded LLM Platform** — LLM/RAG systems engineering: deterministic BM25 retrieval, bounded ingestion with source/line provenance, typed provider integration, strict structured-output validation, citation allow-listing, fail-closed abstention, prompt/data trust boundaries, FastAPI serving, Docker, and reproducible evaluation contracts.
+- **Industrial Vision Inspector** — computer vision / ML engineering: deterministic dataset preparation, PyTorch training/inference, transfer learning, model-card boundaries, classification/error analysis, and calibration-aware evaluation.
 
-The Local AI project does **not** yet claim model inference. Its next AI-specific implementation gate is tracked in [issue #27](https://github.com/tahazarif10/local-ai-desktop-copilot/issues/27): a real local-model provider, typed structured outputs, deterministic transport/failure tests, and a reproducible eval harness. That work remains roadmap evidence until implemented and verified.
+The LLM track is **not** derived from or coupled to Local AI Desktop Copilot. Local AI Desktop Copilot remains a separate Windows systems/privacy project documented independently below.
+
+The Grounded LLM Platform currently makes no real-corpus accuracy, hallucination-rate, or production-readiness claim. Those remain gated on its public-corpus benchmark milestone.
+
+## Grounded LLM Platform — Python / FastAPI / RAG
+
+Repository: [grounded-llm-platform](https://github.com/tahazarif10/grounded-llm-platform)
+
+Verified v0.1 engineering foundation:
+
+- deterministic in-memory BM25 retrieval baseline
+- bounded document/chunk ingestion with source ID and line provenance
+- narrow LLM provider protocol plus OpenAI-compatible HTTP implementation
+- strict Pydantic validation of structured model output
+- fail-closed abstention when retrieval has no usable evidence
+- citation allow-listing against the exact chunks supplied to the provider
+- source/line provenance attached from trusted application state rather than model-generated metadata
+- retrieved-text trust boundary: evidence is treated as untrusted data, not instructions
+- deterministic evaluation harness covering task success, abstention, citation validity, and latency percentiles
+- FastAPI index/query adapter
+- non-root Docker image
+- Ruff, mypy, and pytest verification on Python 3.11 and 3.12
+
+Evidence:
+
+- [foundation PR #1](https://github.com/tahazarif10/grounded-llm-platform/pull/1) — merged
+- merge commit `4fe0f609328775a7aefd1408b4cd603ae4335d00`
+- [CI run #1](https://github.com/tahazarif10/grounded-llm-platform/actions/runs/35743466716) — Python 3.11 and 3.12 jobs both passed Ruff, mypy, and pytest
+- pytest result on Python 3.11: **9 passed**
+- [M1 benchmark issue #3](https://github.com/tahazarif10/grounded-llm-platform/issues/3) tracks the first real public-corpus retrieval/grounded-answer benchmark
+
+Scope boundary: v0.1 establishes software/system contracts. It does not establish real-document retrieval quality, factual accuracy, low hallucination rate, prompt-injection resistance, production latency, or Internet-facing production readiness.
 
 ## Local AI Desktop Copilot — Windows / .NET / WinUI 3
 
