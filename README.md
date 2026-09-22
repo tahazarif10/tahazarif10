@@ -5,9 +5,9 @@
 # Taha Zarif
 
 ### Systems, Robotics & Applied AI Software Engineer
-**C++ · ROS 2 · Zephyr RTOS · PyTorch/OpenCV · Local AI · Privacy-First Windows Systems**
+**C++ · ROS 2 · Zephyr RTOS · LLM/RAG Engineering · PyTorch/OpenCV · Privacy-First Windows Systems**
 
-I build systems software for robotics, embedded/real-time platforms, and applied AI. My AI work emphasizes reproducible data/model pipelines, evaluation discipline, explicit evidence boundaries, and privacy-aware local inference architecture rather than demo-only integrations. Across projects I focus on deterministic behavior, bounded resources, explicit failure handling, CI, and hardware/software debugging.
+I build systems software for robotics, embedded/real-time platforms, and applied AI. My AI work focuses on grounded LLM/RAG systems, retrieval and evaluation contracts, reproducible ML pipelines, calibrated model evaluation, and explicit evidence boundaries rather than demo-only wrappers. Across projects I emphasize deterministic behavior, bounded resources, typed failure handling, CI, and hardware/software debugging.
 
 **11 upstream pull requests merged across 7 external repositories**, including **Zephyr RTOS, Apache NuttX, Robotics Toolbox for Python, and Motrix**.
 
@@ -28,13 +28,22 @@ More upstream work: [Zephyr #118636](https://github.com/zephyrproject-rtos/zephy
 - **[ROS 2 Autonomous Mobile Robot](https://github.com/tahazarif10/ros2-autonomous-mobile-robot)** — ROS 2 Jazzy/Nav2 stack with lifecycle control, TF/QoS contracts, deterministic rosbag2 replay, diagnostics, fault injection, and fail-closed behavior.
 - **[Embedded RTOS Sensor Hub](https://github.com/tahazarif10/embedded-rtos-sensor-hub)** — C/Zephyr RTOS sensor hub with static threads, bounded queues, supervision, bounded retry/recovery, fault injection, and checked-in Twister coverage.\n- **[Industrial Vision Inspector](https://github.com/tahazarif10/industrial-vision-inspector)** — reproducible Python/OpenCV/PyTorch defect-classification pipeline with deterministic dataset preparation, TinyCNN/ResNet-18 training, checkpointed inference, held-out evaluation tooling, calibration-aware metrics (NLL/Brier/ECE + reliability diagrams), model-card/evidence boundaries, and CI.
 
-## Applied AI engineering\n\nCurrent public AI evidence spans two different layers: **Industrial Vision Inspector** demonstrates an end-to-end ML workflow (data preparation → training → evaluation → inference), while **Local AI Desktop Copilot** develops the systems boundary required for a privacy-first local assistant. The desktop project does **not** claim model inference yet; the planned next AI milestone is a real local-model provider with typed structured outputs, failure/cancellation tests, and a reproducible eval harness.\n\n## Real-world engineering
+## Applied AI engineering
+
+My AI portfolio is intentionally split into independent, evidence-backed tracks:
+
+- **LLM / RAG systems:** Grounded LLM Platform implements retrieval, typed provider integration, structured output validation, citation grounding, abstention, prompt/data trust boundaries, and reproducible evaluation as explicit engineering contracts.
+- **Machine learning / computer vision:** Industrial Vision Inspector implements deterministic dataset preparation, PyTorch training/inference, transfer learning, classification metrics, and calibration-aware evaluation.
+
+The current LLM repository does not claim real-corpus accuracy or production readiness yet; its next gate is a reproducible public-corpus benchmark with retrieval and grounded-answer metrics.
+
+## Real-world engineering
 
 I also work on Python/PyQt industrial control software with Delta AS-series PLCs over Modbus TCP, pulse/direction servo motion, homing/jog/state logic, limits, alarms, safety interlocks, and physical PLC/I/O debugging.
 
 ## Stack
 
-**C · C++20 · Python · C#/.NET · ROS 2 · Nav2 · Zephyr RTOS · OpenCV · PyTorch · CNNs/Transfer Learning · Model Evaluation · Local AI Systems · Linux · CMake · GitHub Actions · CodeQL · ASan/UBSan · PLC/Modbus/Servo Automation**
+**C · C++20 · Python · C#/.NET · ROS 2 · Nav2 · Zephyr RTOS · FastAPI · Pydantic · HTTPX · RAG/BM25 · LLM Evaluation · OpenAI-Compatible APIs · OpenCV · PyTorch · CNNs/Transfer Learning · Model Calibration · Linux · Docker · CMake · GitHub Actions · CodeQL · ASan/UBSan · PLC/Modbus/Servo Automation**
 
 ---
 
