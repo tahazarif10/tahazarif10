@@ -46,7 +46,9 @@ Evidence:
 
 - [foundation PR #1](https://github.com/tahazarif10/grounded-llm-platform/pull/1) — merged
 - merge commit `4fe0f609328775a7aefd1408b4cd603ae4335d00`
-- [CI run #1](https://github.com/tahazarif10/grounded-llm-platform/actions/runs/35743466716) — Python 3.11 and 3.12 jobs both passed Ruff, mypy, and pytest; Python 3.11 reported **9 passed**\n- [CI hygiene PR #4](https://github.com/tahazarif10/grounded-llm-platform/pull/4) — moved workflow actions to pinned v6 SHAs, removed the deprecated TestClient path, added grouped Dependabot updates and a review template\n- [CI run #5](https://github.com/tahazarif10/grounded-llm-platform/actions/runs/35744059654) — Python 3.11/3.12 quality gates passed and the non-root Docker image built successfully
+- [CI run #1](https://github.com/tahazarif10/grounded-llm-platform/actions/runs/35743466716) — Python 3.11 and 3.12 jobs both passed Ruff, mypy, and pytest; Python 3.11 reported **9 passed**
+- [CI hygiene PR #4](https://github.com/tahazarif10/grounded-llm-platform/pull/4) — moved workflow actions to pinned v6 SHAs, removed the deprecated TestClient path, added grouped Dependabot updates and a review template
+- [CI run #5](https://github.com/tahazarif10/grounded-llm-platform/actions/runs/35744059654) — Python 3.11/3.12 quality gates passed and the non-root Docker image built successfully
 - [M1 benchmark issue #3](https://github.com/tahazarif10/grounded-llm-platform/issues/3) tracks the first real public-corpus retrieval/grounded-answer benchmark
 
 Scope boundary: v0.1 establishes software/system contracts. It does not establish real-document retrieval quality, factual accuracy, low hallucination rate, prompt-injection resistance, production latency, or Internet-facing production readiness.
@@ -178,10 +180,13 @@ Implemented portfolio pipeline:
 - reproducible NEU-CLS preparation path with SHA-256 manifests
 - TinyCNN and ResNet-18 model paths
 - train/evaluate/infer CLI
-- accuracy, top-2 accuracy, macro precision/recall/F1, confusion matrix, training history, and annotated inference output\n- probability-quality evaluation with mean confidence, negative log-likelihood, multiclass Brier score, expected calibration error (ECE), calibration bins, and reliability diagrams
+- accuracy, top-2 accuracy, macro precision/recall/F1, confusion matrix, training history, and annotated inference output
+- probability-quality evaluation with mean confidence, negative log-likelihood, multiclass Brier score, expected calibration error (ECE), calibration bins, and reliability diagrams
 - deterministic synthetic generator used for unit/smoke verification
 
-The calibration-aware evaluation path was merged in [PR #4](https://github.com/tahazarif10/industrial-vision-inspector/pull/4); [CI #17](https://github.com/tahazarif10/industrial-vision-inspector/actions/runs/35741143007) passed the repository test/smoke workflow on the PR head.\n\nThe checked synthetic smoke result is intentionally **not** represented as real NEU-CLS or manufacturing performance. Real held-out dataset benchmarking remains a separate evidence gate.
+The calibration-aware evaluation path was merged in [PR #4](https://github.com/tahazarif10/industrial-vision-inspector/pull/4); [CI #17](https://github.com/tahazarif10/industrial-vision-inspector/actions/runs/35741143007) passed the repository test/smoke workflow on the PR head.
+
+The checked synthetic smoke result is intentionally **not** represented as real NEU-CLS or manufacturing performance. Real held-out dataset benchmarking remains a separate evidence gate.
 
 ## Upstream Open-Source Contributions
 
