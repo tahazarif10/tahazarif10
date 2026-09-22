@@ -23,10 +23,12 @@ More upstream work: [Zephyr #118636](https://github.com/zephyrproject-rtos/zephy
 
 ## Featured projects
 
+- **[Grounded LLM Platform](https://github.com/tahazarif10/grounded-llm-platform)** — Python/FastAPI RAG platform with deterministic BM25 retrieval, typed provider boundaries, strict structured outputs, source/line provenance, citation allow-listing, fail-closed abstention, an evaluation harness, Docker, and Python 3.11/3.12 CI.
 - **[Robotics Control Core](https://github.com/tahazarif10/robotics-control-core)** — C++20 differential-drive planning/control library with occupancy-grid A*, collision-aware path shaping, PID, pure pursuit, SE(2) odometry, deterministic benchmarks, multi-compiler CI, sanitizers, CodeQL, and installable CMake packaging.
-- **[Local AI Desktop Copilot](https://github.com/tahazarif10/local-ai-desktop-copilot)** — privacy-first Windows systems foundation with identity-first privacy gates, RAM-only sensing, bounded orchestration, and deterministic failure/recovery verification.
+- **[Industrial Vision Inspector](https://github.com/tahazarif10/industrial-vision-inspector)** — reproducible Python/OpenCV/PyTorch defect-classification pipeline with deterministic dataset preparation, TinyCNN/ResNet-18 training, checkpointed inference, calibration-aware evaluation (NLL/Brier/ECE + reliability diagrams), model-card/evidence boundaries, and CI.
 - **[ROS 2 Autonomous Mobile Robot](https://github.com/tahazarif10/ros2-autonomous-mobile-robot)** — ROS 2 Jazzy/Nav2 stack with lifecycle control, TF/QoS contracts, deterministic rosbag2 replay, diagnostics, fault injection, and fail-closed behavior.
-- **[Embedded RTOS Sensor Hub](https://github.com/tahazarif10/embedded-rtos-sensor-hub)** — C/Zephyr RTOS sensor hub with static threads, bounded queues, supervision, bounded retry/recovery, fault injection, and checked-in Twister coverage.\n- **[Industrial Vision Inspector](https://github.com/tahazarif10/industrial-vision-inspector)** — reproducible Python/OpenCV/PyTorch defect-classification pipeline with deterministic dataset preparation, TinyCNN/ResNet-18 training, checkpointed inference, held-out evaluation tooling, calibration-aware metrics (NLL/Brier/ECE + reliability diagrams), model-card/evidence boundaries, and CI.
+- **[Embedded RTOS Sensor Hub](https://github.com/tahazarif10/embedded-rtos-sensor-hub)** — C/Zephyr RTOS sensor hub with static threads, bounded queues, supervision, bounded retry/recovery, fault injection, and checked-in Twister coverage.
+- **[Local AI Desktop Copilot](https://github.com/tahazarif10/local-ai-desktop-copilot)** — privacy-first Windows systems foundation with identity-first privacy gates, RAM-only sensing, bounded orchestration, and deterministic failure/recovery verification.
 
 ## Applied AI engineering
 
