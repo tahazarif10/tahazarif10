@@ -7,17 +7,24 @@
 
 ### Profile
 
-Systems, robotics, and applied-AI developer focused on **C/C++, Python, ROS 2, Zephyr RTOS, PyTorch/OpenCV, privacy-aware Windows systems, and verification-driven engineering**. Builds deterministic, testable software with bounded-resource design, explicit failure handling, CI, fault injection, reproducible ML/data pipelines, model evaluation, and hardware/software debugging. Public work includes **11 merged upstream pull requests across 7 external repositories**, including two contributions to **Zephyr RTOS** plus merged work in **Apache NuttX, Robotics Toolbox for Python, Motrix**, and safety-oriented robotics/localization projects.
+Systems, robotics, and applied-AI developer focused on **C/C++, Python, ROS 2, Zephyr RTOS, LLM/RAG systems, PyTorch/OpenCV, privacy-aware Windows systems, and verification-driven engineering**. Builds deterministic, testable software with bounded-resource design, explicit failure handling, CI, fault injection, reproducible ML/data pipelines, model evaluation, and hardware/software debugging. Public work includes **11 merged upstream pull requests across 7 external repositories**, including two contributions to **Zephyr RTOS** plus merged work in **Apache NuttX, Robotics Toolbox for Python, Motrix**, and safety-oriented robotics/localization projects.
 
 ### Selected Engineering Projects
 
+- **[Grounded LLM Platform](https://github.com/tahazarif10/grounded-llm-platform)** — production-oriented Python/FastAPI RAG foundation with deterministic BM25 retrieval, bounded ingestion with source/line provenance, OpenAI-compatible provider abstraction, strict Pydantic-validated structured outputs, citation allow-listing, fail-closed abstention, prompt/data trust boundaries, evaluation harness, Docker, and Python 3.11/3.12 CI.
 - **[Robotics Control Core](https://github.com/tahazarif10/robotics-control-core)** — C++20 differential-drive navigation/control library with occupancy-grid A*, obstacle inflation, collision-safe path shaping, PID, interpolated-lookahead pure pursuit, kinematics, and SE(2) odometry. Verified with GCC/Clang/MSVC CI, ASan/UBSan, CodeQL, installable CMake packaging, and deterministic benchmarks.
 - **[Local AI Desktop Copilot](https://github.com/tahazarif10/local-ai-desktop-copilot)** — privacy-first Windows/.NET systems foundation with explicit Arm/Disarm lifecycle ownership, identity-first privacy gates, RAM-only Windows Graphics Capture, capability-gated UI Automation, bounded semantic snapshots/orchestration, provider-isolation measurement, and deterministic recovery verification. OCR, model inference, voice, and autonomous actions remain outside the accepted implementation boundary.
 - **[ROS 2 Autonomous Mobile Robot](https://github.com/tahazarif10/ros2-autonomous-mobile-robot)** — ROS 2 Jazzy / Ubuntu 24.04 AMR stack with lifecycle control, Nav2, TF/QoS contracts, deterministic rosbag2 replay, diagnostics, fault injection, missing-TF fail-closed verification, and isolated integration tests.
 - **[Embedded RTOS Sensor Hub](https://github.com/tahazarif10/embedded-rtos-sensor-hub)** — C / Zephyr RTOS 4.4.2 sensor hub using static threads, bounded `k_msgq`, semaphores/mutexes, heartbeat supervision, bounded retries, sequence/timestamp integrity checks, deterministic fault injection, and **12/12 ztest/Twister** cases on `native_sim`.
 - **[Industrial Vision Inspector](https://github.com/tahazarif10/industrial-vision-inspector)** — Python/OpenCV/PyTorch surface-defect inspection pipeline with classical image-quality metrics, reproducible dataset preparation with SHA-256 manifests, TinyCNN/ResNet-18 model paths, classification + calibration-aware evaluation (NLL, multiclass Brier score, ECE, reliability diagrams), checkpointed inference, and explicit separation of synthetic smoke evidence from real-data performance claims.
 
-### Applied AI Engineering\n\n- **Computer vision / ML:** end-to-end PyTorch classification workflow with deterministic dataset preparation, transfer-learning path, model checkpointing, held-out evaluation tooling, confusion matrices, per-class metrics, and explicit model-card/evidence boundaries.\n- **Local AI systems:** privacy-first desktop sensing and semantic-context foundation with capability gates, epoch-bound stale-result rejection, bounded orchestration, provider-isolation measurement, and a defined next milestone for real local-model inference, typed structured outputs, and reproducible evals.\n- **Engineering standard:** synthetic/smoke results are kept separate from real-dataset or hardware performance claims; model/runtime quality is not promoted into the resume until measured evidence exists.\n\n### Open-Source Contributions
+### Applied AI Engineering
+
+- **LLM / RAG systems:** explicit retrieval and grounding architecture with deterministic BM25 baseline, typed provider integration, structured JSON output validation, source-provenance enforcement, citation allow-listing, abstention, provider failure handling, prompt-injection trust boundaries, FastAPI serving, and a reproducible evaluation harness.
+- **Computer vision / ML:** end-to-end PyTorch classification workflow with deterministic dataset preparation, transfer learning, checkpointed inference, held-out evaluation tooling, confusion matrices, per-class metrics, and calibration-aware evaluation (NLL, multiclass Brier score, ECE, reliability diagrams).
+- **Engineering standard:** synthetic/unit evidence is separated from real model-quality claims; the LLM track does not claim real-corpus accuracy until its public-corpus benchmark gate is completed.
+
+### Open-Source Contributions
 
 **11 merged upstream PRs across 7 external repositories.** Selected contributions:
 
@@ -59,6 +66,7 @@ A **Zephyr Technical Contributor** badge application has been submitted based on
 **Robotics:** ROS 2 Jazzy, Nav2, TF2, lifecycle nodes, rosbag2, differential-drive navigation, localization/fault handling  
 **Embedded / RTOS:** Zephyr RTOS, ztest/Twister, `k_msgq`, threads, mutexes, semaphores, bounded retries, fault injection  
 **Windows / Systems:** WinUI 3, Windows Graphics Capture, UI Automation, bounded concurrency/lifecycle design  
+**AI / LLM Engineering:** RAG, BM25 retrieval, grounded generation, structured outputs, citation validation, abstention, FastAPI, Pydantic, HTTPX, OpenAI-compatible APIs, eval harnesses  
 **AI / Computer Vision:** OpenCV, PyTorch, CNNs, ResNet-18, image preprocessing, transfer learning, train/evaluate/infer pipelines, model cards, reproducible dataset manifests, classification/error analysis, NLL/Brier/ECE calibration evaluation  
 **Tooling:** Linux, Git, CMake, GitHub Actions, Docker, CodeQL, ASan/UBSan  
 **Industrial:** PLC, Modbus TCP, servo motion, pulse/direction, CNC automation
