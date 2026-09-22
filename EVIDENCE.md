@@ -148,10 +148,10 @@ Implemented portfolio pipeline:
 - reproducible NEU-CLS preparation path with SHA-256 manifests
 - TinyCNN and ResNet-18 model paths
 - train/evaluate/infer CLI
-- accuracy, macro precision/recall/F1, confusion matrix, training history, and annotated inference output
+- accuracy, top-2 accuracy, macro precision/recall/F1, confusion matrix, training history, and annotated inference output\n- probability-quality evaluation with mean confidence, negative log-likelihood, multiclass Brier score, expected calibration error (ECE), calibration bins, and reliability diagrams
 - deterministic synthetic generator used for unit/smoke verification
 
-The checked synthetic smoke result is intentionally **not** represented as real NEU-CLS or manufacturing performance. Real held-out dataset benchmarking remains a separate evidence gate.
+The calibration-aware evaluation path was merged in [PR #4](https://github.com/tahazarif10/industrial-vision-inspector/pull/4); [CI #17](https://github.com/tahazarif10/industrial-vision-inspector/actions/runs/35741143007) passed the repository test/smoke workflow on the PR head.\n\nThe checked synthetic smoke result is intentionally **not** represented as real NEU-CLS or manufacturing performance. Real held-out dataset benchmarking remains a separate evidence gate.
 
 ## Upstream Open-Source Contributions
 
