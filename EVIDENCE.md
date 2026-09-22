@@ -46,8 +46,7 @@ Evidence:
 
 - [foundation PR #1](https://github.com/tahazarif10/grounded-llm-platform/pull/1) — merged
 - merge commit `4fe0f609328775a7aefd1408b4cd603ae4335d00`
-- [CI run #1](https://github.com/tahazarif10/grounded-llm-platform/actions/runs/35743466716) — Python 3.11 and 3.12 jobs both passed Ruff, mypy, and pytest
-- pytest result on Python 3.11: **9 passed**
+- [CI run #1](https://github.com/tahazarif10/grounded-llm-platform/actions/runs/35743466716) — Python 3.11 and 3.12 jobs both passed Ruff, mypy, and pytest; Python 3.11 reported **9 passed**\n- [CI hygiene PR #4](https://github.com/tahazarif10/grounded-llm-platform/pull/4) — moved workflow actions to pinned v6 SHAs, removed the deprecated TestClient path, added grouped Dependabot updates and a review template\n- [CI run #5](https://github.com/tahazarif10/grounded-llm-platform/actions/runs/35744059654) — Python 3.11/3.12 quality gates passed and the non-root Docker image built successfully
 - [M1 benchmark issue #3](https://github.com/tahazarif10/grounded-llm-platform/issues/3) tracks the first real public-corpus retrieval/grounded-answer benchmark
 
 Scope boundary: v0.1 establishes software/system contracts. It does not establish real-document retrieval quality, factual accuracy, low hallucination rate, prompt-injection resistance, production latency, or Internet-facing production readiness.
