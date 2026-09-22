@@ -12,6 +12,15 @@ This page maps public profile and resume claims to reproducible evidence. Perfor
 - Synthetic computer-vision smoke results are not presented as real-dataset accuracy.
 - Pending badges or credentials are not presented as earned until formally issued.
 
+## Applied AI Engineering — current evidence and boundary
+
+The public portfolio currently demonstrates applied AI in two complementary areas:
+
+- **Industrial Vision Inspector** provides an end-to-end ML workflow: deterministic dataset preparation, PyTorch training, checkpointed inference, held-out evaluation tooling, model-card documentation, and explicit separation of synthetic smoke evidence from real-dataset claims.
+- **Local AI Desktop Copilot** provides the systems/privacy side of local AI: bounded sensing, capability-gated semantic context, stale-result rejection, provider-isolation measurement, and bounded orchestration.
+
+The Local AI project does **not** yet claim model inference. Its next AI-specific implementation gate is tracked in [issue #27](https://github.com/tahazarif10/local-ai-desktop-copilot/issues/27): a real local-model provider, typed structured outputs, deterministic transport/failure tests, and a reproducible eval harness. That work remains roadmap evidence until implemented and verified.
+
 ## Local AI Desktop Copilot — Windows / .NET / WinUI 3
 
 Repository: [local-ai-desktop-copilot](https://github.com/tahazarif10/local-ai-desktop-copilot)
