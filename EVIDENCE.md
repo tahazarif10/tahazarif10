@@ -21,7 +21,7 @@ The applied-AI portfolio is intentionally split into two independent public trac
 
 The LLM track is **not** derived from or coupled to Local AI Desktop Copilot. Local AI Desktop Copilot remains a separate Windows systems/privacy project documented independently below.
 
-The Grounded LLM Platform currently makes no real-corpus accuracy, hallucination-rate, or production-readiness claim. Those remain gated on its public-corpus benchmark milestone.
+The Grounded LLM Platform now includes a reproducible public-corpus **retrieval** benchmark, while model-backed grounded-answer quality remains a separate evidence gate. The repository still makes no general claim of answer accuracy, low hallucination rate, prompt-injection resistance, or production readiness.
 
 ## Grounded LLM Platform — Python / FastAPI / RAG
 
@@ -49,9 +49,14 @@ Evidence:
 - [CI run #1](https://github.com/tahazarif10/grounded-llm-platform/actions/runs/35743466716) — Python 3.11 and 3.12 jobs both passed Ruff, mypy, and pytest; Python 3.11 reported **9 passed**
 - [CI hygiene PR #4](https://github.com/tahazarif10/grounded-llm-platform/pull/4) — moved workflow actions to pinned v6 SHAs, removed the deprecated TestClient path, added grouped Dependabot updates and a review template
 - [CI run #5](https://github.com/tahazarif10/grounded-llm-platform/actions/runs/35744059654) — Python 3.11/3.12 quality gates passed and the non-root Docker image built successfully
-- [M1 benchmark issue #3](https://github.com/tahazarif10/grounded-llm-platform/issues/3) tracks the first real public-corpus retrieval/grounded-answer benchmark
+- [public-corpus retrieval benchmark PR #7](https://github.com/tahazarif10/grounded-llm-platform/pull/7) — merged as `59e7c3306396f1bc67f55e5a9b511af037f3c478`
+- [post-merge benchmark run](https://github.com/tahazarif10/grounded-llm-platform/actions/runs/35840850783) — passed on `main` and uploaded the machine-readable `zephyr-bt-v1-retrieval-report` artifact
+- corpus: five Apache-2.0 Zephyr Bluetooth shell documents pinned to upstream commit `70be2ff0b565a3313128f5577f51cfeb3ebcf602`, with checked-in paths/blob SHAs and SHA-256 verification before use
+- evaluation set: 10 answerable source-labeled cases + 2 negative lexical cases
+- measured on that exact development-visible suite: **Recall@5 = 1.0, MRR = 1.0, nDCG@5 = 1.0, negative zero-hit rate = 1.0**
+- the measured values are encoded as regression floors for the exact corpus/case version
 
-Scope boundary: v0.1 establishes software/system contracts. It does not establish real-document retrieval quality, factual accuracy, low hallucination rate, prompt-injection resistance, production latency, or Internet-facing production readiness.
+Scope boundary: these benchmark values are deterministic evidence for this small, development-visible retrieval suite and must not be generalized to overall RAG quality. Model-backed grounded-answer accuracy, hallucination rate, prompt-injection resistance, production latency, and Internet-facing production readiness remain unestablished.
 
 ## Local AI Desktop Copilot — Windows / .NET / WinUI 3
 
