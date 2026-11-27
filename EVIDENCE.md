@@ -195,47 +195,50 @@ The checked synthetic smoke result is intentionally **not** represented as real 
 
 ## Upstream Open-Source Contributions
 
-**11 merged upstream pull requests across 7 external repositories, verified as of 2026-09-17.**
+**12 merged upstream pull requests across 7 external repositories, verified as of 2026-11-27.**
 
-### Zephyr RTOS — 2 merged PRs
+### Zephyr RTOS — 3 merged PRs
 
-1. **[PR #118971](https://github.com/zephyrproject-rtos/zephyr/pull/118971) — Bluetooth: Host: add native_sim identity API tests**  
+1. **[PR #119955](https://github.com/zephyrproject-rtos/zephyr/pull/119955) — Bluetooth: Host: reject invalid identity in OOB lookup**  
+   Rejected identity handles outside the current identity set or pointing to an empty deleted slot before producing local LE OOB data; added native_sim coverage for an unused handle and a deleted non-tail identity.
+
+2. **[PR #118971](https://github.com/zephyrproject-rtos/zephyr/pull/118971) — Bluetooth: Host: add native_sim identity API tests**  
    Added `native_sim` coverage for public Bluetooth identity-management APIs using `bt_enable()` and `bt_id_create()`, `bt_id_reset()`, `bt_id_delete()`, and `bt_id_get()` through the real Bluetooth host with a fake HCI driver rather than host-internal mocks.
 
-2. **[PR #118636](https://github.com/zephyrproject-rtos/zephyr/pull/118636) — Bluetooth: HCI: clarify pairing error scope**  
+3. **[PR #118636](https://github.com/zephyrproject-rtos/zephyr/pull/118636) — Bluetooth: HCI: clarify pairing error scope**  
    Clarified that HCI status `0x29` (`Pairing with Unit Key Not Supported`) is valid for BR/EDR connections only and aligned public disconnect/test-helper documentation with that scope.
 
 **Recognition status:** an application for the **Zephyr Technical Contributor** badge has been submitted. Review is pending; the badge is not claimed as earned until formally issued.
 
 ### Robotics Toolbox for Python — 2 merged PRs
 
-3. **[PR #667](https://github.com/petercorke/robotics-toolbox-python/pull/667)** — fixed numerical IK convergence ordering so an already-converged initial configuration is accepted before a potentially singular solver update; updated solver residual handling and added regression coverage.
+4. **[PR #667](https://github.com/petercorke/robotics-toolbox-python/pull/667)** — fixed numerical IK convergence ordering so an already-converged initial configuration is accepted before a potentially singular solver update; updated solver residual handling and added regression coverage.
 
-4. **[PR #644](https://github.com/petercorke/robotics-toolbox-python/pull/644)** — restored the missing `[-1, 1]` distance-transform neighbor and added a regression for the unique shortest diagonal step.
+5. **[PR #644](https://github.com/petercorke/robotics-toolbox-python/pull/644)** — restored the missing `[-1, 1]` distance-transform neighbor and added a regression for the unique shortest diagonal step.
 
 ### Motrix — 2 merged PRs
 
-5. **[PR #2138](https://github.com/agalwood/Motrix/pull/2138)** — restored the macOS Menu Bar Only Dock-state invariant after main-window dismissal and added focused regression coverage. Fork CI covered macOS, Windows, and Linux.
+6. **[PR #2138](https://github.com/agalwood/Motrix/pull/2138)** — restored the macOS Menu Bar Only Dock-state invariant after main-window dismissal and added focused regression coverage. Fork CI covered macOS, Windows, and Linux.
 
-6. **[PR #1885](https://github.com/agalwood/Motrix/pull/1885)** — restored Windows tray left-click main-window toggling while preserving right-click and non-Windows menu behavior; regression coverage was strengthened in response to maintainer review.
+7. **[PR #1885](https://github.com/agalwood/Motrix/pull/1885)** — restored Windows tray left-click main-window toggling while preserving right-click and non-Windows menu behavior; regression coverage was strengthened in response to maintainer review.
 
 ### DQ QuestionBank Core — 2 merged PRs
 
-7. **[PR #127](https://github.com/wzsisshadiao-crypto/dq-questionbank-core/pull/127)** — added collection-scoped editor draft autosave/crash recovery, dirty-state unload protection, restore/discard flow, and focused regression coverage.
+8. **[PR #127](https://github.com/wzsisshadiao-crypto/dq-questionbank-core/pull/127)** — added collection-scoped editor draft autosave/crash recovery, dirty-state unload protection, restore/discard flow, and focused regression coverage.
 
-8. **[PR #128](https://github.com/wzsisshadiao-crypto/dq-questionbank-core/pull/128)** — fixed a round-trip data-preservation bug so ragged rows and trailing empty rows retain their canonical table shape; added DOM-level regression coverage.
+9. **[PR #128](https://github.com/wzsisshadiao-crypto/dq-questionbank-core/pull/128)** — fixed a round-trip data-preservation bug so ragged rows and trailing empty rows retain their canonical table shape; added DOM-level regression coverage.
 
 ### Apache NuttX — 1 merged PR
 
-9. **[PR #20147](https://github.com/apache/nuttx/pull/20147)** — documented Python linting/formatting requirements (`black`, `isort`, `flake8`), `checkpatch.sh` verification/auto-format paths, and the existing pre-commit workflow; merged after maintainer approvals.
+10. **[PR #20147](https://github.com/apache/nuttx/pull/20147)** — documented Python linting/formatting requirements (`black`, `isort`, `flake8`), `checkpatch.sh` verification/auto-format paths, and the existing pre-commit workflow; merged after maintainer approvals.
 
 ### Orchestrator MCP — 1 merged PR
 
-10. **[PR #11](https://github.com/crAK1644/orchestrator-mcp/pull/11)** — fixed delegated synthesis so machine-readable review outcomes are provided from review storage while reviewer prose/usage is omitted; added end-to-end regression coverage.
+11. **[PR #11](https://github.com/crAK1644/orchestrator-mcp/pull/11)** — fixed delegated synthesis so machine-readable review outcomes are provided from review storage while reviewer prose/usage is omitted; added end-to-end regression coverage.
 
 ### GPS-Denied UAV Navigation — 1 merged PR
 
-11. **[PR #28](https://github.com/smshagor-dev/UVA-GPS-Denied-Navigation-in-Dynamic-Environments/pull/28)** — carried TDOA validity through confidence-floor and recovery/fusion paths so non-finite position/confidence data remains fail-closed; added focused regressions.
+12. **[PR #28](https://github.com/smshagor-dev/UVA-GPS-Denied-Navigation-in-Dynamic-Environments/pull/28)** — carried TDOA validity through confidence-floor and recovery/fusion paths so non-finite position/confidence data remains fail-closed; added focused regressions.
 
 ## Industrial Automation Experience
 
